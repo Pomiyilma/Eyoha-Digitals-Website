@@ -41,26 +41,26 @@ export default function Hero() {
                 className={`relative mx-auto w-[92%] lg:w-[96%] ${contentMaxWidth} flex flex-col justify-start`}
             >
                 {/* 1. Main Headline */}
-                <div className="text-white lg:pt-7 lg:pl-20 mb-6 w-[1152px] h-[84px] max-w-[1152px] leading-tight">
-                    <h1 className="text-3xl md:text-5xl font-bold font-poppins ">
+                <div className="text-white lg:pt-12 lg:pl-10 mb-6 w-[1152px] h-[84px] max-w-[1152px] leading-tight">
+                    <h1 className="text-3xl md:text-6xl font-bold font-poppins ">
                         Strategy. Creativity.
                         <span className={resultsColor}>Results.</span>
                     </h1>
                 </div>
 
                 {/* 2. Sub-Headline/Description */}
-                <p className="text-gray-300 text-lg md:text-lg font-normal mb-10 w-full max-w-[700px] lg:pl-20">
+                <p className="text-gray-300 text-lg md:text-lg font-normal mb-10 w-full max-w-[700px] lg:pl-10">
                     We help brands thrive in the digital age through tailored,
                     data-driven marketing solutions that deliver measurable
                     growth and lasting impact.
                 </p>
 
                 {/* 3. Call-to-Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-6 mb-20 items-center lg:pl-20">
+                <div className="flex flex-col sm:flex-row gap-[24px] mb-20 items-center lg:pl-10 h-[64px]">
                     {/* Button 1: Solid Purple ("Let's Talk") */}
                     <Link href="#contact">
                         <button
-                            className={`flex items-center space-x-2 text-white text-base font-semibold px-8 h-12 rounded-lg 
+                            className={`flex items-center space-x-2 text-white text-base font-semibold px-8 w-[224.09px] max-w-[224.09px] h-[64px]  rounded-lg 
                                        ${purpleCTA} hover:bg-purple-700 transition duration-200 shadow-xl`}
                         >
                             <span>Let's Talk</span>
@@ -71,7 +71,7 @@ export default function Hero() {
                     {/* Button 2: Bordered/Outline ("View Our Work") */}
                     <Link href="#portfolio">
                         <button
-                            className="flex items-center space-x-2 text-white text-base font-semibold px-8 h-12 rounded-lg 
+                            className="flex items-center space-x-2 text-white text-base font-semibold px-8 w-[224.09px] max-w-[224.09px] h-[64px] rounded-lg 
                                        border-2 border-white hover:bg-white hover:text-purple-700 transition duration-200"
                         >
                             <span>View Our Work</span>
@@ -88,7 +88,7 @@ export default function Hero() {
                 </div>
 
                 {/* 4. Stats Bar (10+, 95%, 24/7) */}
-                <div className="flex space-x-12  lg:pl-20">
+                <div className="flex space-x-12  lg:pl-10">
                     {/* Stat 1: Happy Clients */}
                     <div className="flex flex-col items-start">
                         <span className="text-2xl font-extrabold text-white">
