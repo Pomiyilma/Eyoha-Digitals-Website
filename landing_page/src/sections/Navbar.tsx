@@ -50,7 +50,7 @@ export default function Navbar() {
     return (
         // Apply the conditional classes along with the fixed positioning
         <section
-            className={`fixed top-0 left-0 w-full py-[34px] z-50 transition-all duration-300 ${navbarClasses}`}
+            className={`fixed top-0 left-0 w-full pt-[34px] pb-2 z-50 transition-all duration-300 ${navbarClasses}`}
         >
             {/* Inner container centers the content and restricts its width */}
             <div className={`mx-auto w-[96%] sm:w-[94%] ${desktopMaxWidth}`}>

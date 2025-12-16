@@ -1,39 +1,45 @@
 import FeatureCard from "@/components/FeatureCard";
-import icon1 from "../assets/images/icon1.png";
+
+import growth from "../assets/images/growth.png";
+import creative from "../assets/images/creative.png";
+import reporting from "../assets/images/reporting.png";
+import delivery from "../assets/images/delivery.png";
+import insight from "../assets/images/insight.png";
+import strategy from "../assets/images/strategy.png";
 // --- Data for the six feature cards based on image_8f35a4.png ---
 const featuresData = [
     {
-        iconSrc: icon1,
+        iconSrc: strategy,
         title: "Strategic, Data-Driven",
         description:
             "Marketing backed by numbers, not random posting. We analyze data to ensure every campaign hits its target.",
     },
     {
-        iconSrc: icon1,
+        iconSrc: insight,
         title: "Local & Global Insight",
         description:
             "A deep understanding of the Ethiopian market nuances combined with global digital standards.",
     },
     {
-        iconSrc: icon1,
+        iconSrc: delivery,
         title: "Reliable Delivery",
         description:
             "Fast execution and consistent monthly content delivery so your brand never goes silent.",
     },
     {
-        iconSrc: icon1,
+        iconSrc: reporting,
         title: "Transparent Reporting",
         description:
             "Clear, honest reporting with actionable insights. You will always know exactly how your investment is performing.",
     },
     {
-        iconSrc: icon1,
+        iconSrc: creative,
         title: "Creative Storytelling",
         description:
             "Tailored narratives for each platform that capture attention and resonate with your specific audience.",
     },
     {
-        iconSrc: icon1,
+        iconSrc: growth,
         title: "Growth-Focused Pricing",
         description:
             "Affordable, flexible packages specifically designed for startups and growing businesses to scale.",
@@ -50,7 +56,7 @@ export default function WhyUs() {
 
     return (
         // Adjusted padding to match the spacing above and below the content in the full design
-        <div className="py-24 md:py-32">
+        <div className="py-24 md:py-[112px] px-[55px] bg-[#F8FAFC]">
             <div className={`mx-auto w-[92%] lg:w-[96%] ${contentMaxWidth}`}>
                 {/* Heading and Sub-text Container */}
                 <div className="mx-auto max-w-3xl text-center mb-16">
@@ -68,12 +74,6 @@ export default function WhyUs() {
                         your business. Here is why partners choose us to elevate
                         their digital presence.
                     </p>
-
-                    {/* Pink accent line/divider (inferred from image) */}
-                    <div
-                        className="w-16 h-1 mx-auto"
-                        style={{ backgroundColor: "#F38181" }}
-                    ></div>
                 </div>
 
                 {/* 6-Card Feature Grid */}
