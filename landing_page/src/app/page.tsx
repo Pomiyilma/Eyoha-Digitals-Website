@@ -1,6 +1,7 @@
 import FeaturedClients from "@/components/FeaturedClients";
 import AboutUs from "@/sections/AboutUs";
 import ClientSuccessStories from "@/sections/ClientSuccessStories";
+import CtaBanner from "@/sections/CtaBanner";
 import CtaSection from "@/sections/CtaSection";
 import ExcellenceSection from "@/sections/ExcellenceSection";
 import EyohaGuarantee from "@/sections/EyohaGuarantee";
@@ -21,6 +22,7 @@ export default function Home() {
             <AboutUs />
             <WhyUs />
             <ServicesSection />
+            <CtaBanner />
             <RecentWins />
             <ClientSuccessStories />
             {/* <PricingPlans /> */}
