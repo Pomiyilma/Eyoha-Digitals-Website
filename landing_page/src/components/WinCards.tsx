@@ -22,7 +22,7 @@ const WinCard: React.FC<WinCardProps> = ({
 }) => {
     // Custom style for the subtle purple/white background and shadow
     const cardStyle =
-        "bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center h-[500px]";
+        "bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center ";
 
     return (
         <div className={cardStyle}>
@@ -37,7 +37,7 @@ const WinCard: React.FC<WinCardProps> = ({
                 }}
             >
                 {/* Inner Icon Placeholder */}
-                <div className="w-12 h-12 relative">
+                <div className="w-12 h-12 relative rounded-sm">
                     <Image
                         src={iconSrc} // Path to the small icon inside the circle
                         alt={`${title} icon`}
