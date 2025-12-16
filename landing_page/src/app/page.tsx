@@ -11,6 +11,7 @@ import Footer from "@/sections/Footer";
 import Hero from "@/sections/Hero";
 import PricingSection from "@/sections/Packages";
 import PricingPlans from "@/sections/PricingPlans";
+import RecentWinsSection from "@/sections/RecentWins";
 import RecentWins from "@/sections/RecentWins";
 import ServicesSection from "@/sections/Services";
 import OurServices from "@/sections/Services";
@@ -25,6 +26,7 @@ export default function Home() {
             <ServicesSection />
             <CtaBanner />
             <RecentWins />
+          
             <ClientSuccessStories />
             {/* <PricingPlans /> */}
             <EyohaGuarantee />

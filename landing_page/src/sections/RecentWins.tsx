@@ -1,5 +1,5 @@
 import WinCard from "@/components/WinCards";
-
+import growth from "../assets/images/seoIcon.png";
 // --- Data for the four win cards based on image_638320.png ---
 const winsData = [
     {
@@ -10,7 +10,7 @@ const winsData = [
             "From zero to viral. We helped XYZ build a fast growing digital presence.",
         graphicSrc: "/assets/graphics/reach-graphic.png", // Placeholder for the bottom chart/visual
         iconBgColor: "linear-gradient(135deg, #6A0DAD, #FF8C00)", // Gradient for the top circle
-        iconSrc: "/assets/icons/trend-up.svg", // Placeholder for the small icon inside the circle
+        iconSrc: growth,
     },
     {
         metric: "5x",
@@ -19,7 +19,7 @@ const winsData = [
         description: "A full SEO upgrade pushed ABC to the top search results.",
         graphicSrc: "/assets/graphics/traffic-graphic.png",
         iconBgColor: "linear-gradient(135deg, #FF8C00, #F06A35)",
-        iconSrc: "/assets/icons/search-ranking.svg",
+        iconSrc: growth,
     },
     {
         metric: "400%",
@@ -29,7 +29,7 @@ const winsData = [
             "Smart ad targeting helped DEF turn clicks into paying customers.",
         graphicSrc: "/assets/graphics/conversion-graphic.png",
         iconBgColor: "linear-gradient(135deg, #FF8C00, #6A0DAD)",
-        iconSrc: "/assets/icons/conversion-rate.svg",
+        iconSrc: growth,
     },
     {
         metric: "+1M",
@@ -39,7 +39,7 @@ const winsData = [
             "A blended SMM strategy expanded brand awareness dramatically.",
         graphicSrc: "/assets/graphics/impressions-graphic.png",
         iconBgColor: "linear-gradient(135deg, #6A0DAD, #9C33D2)",
-        iconSrc: "/assets/icons/social-impressions.svg",
+        iconSrc: growth,
     },
 ];
 
