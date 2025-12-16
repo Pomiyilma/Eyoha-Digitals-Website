@@ -1,12 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react"; // 1. Import useEffect
 // Assuming you have the correct path to your logo image
 import logoImage from "../assets/images/navbarLogo.png";
 
 import Link from "next/link";
 import Image from "next/image";
-
-// Assuming Button component is not used, using native button tag for styling consistency
 
 const navLinks = [
     { label: "Home", href: "#" },
@@ -18,21 +16,45 @@ const navLinks = [
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    // 2. State to track if the page has been scrolled
+    const [scrolled, setScrolled] = useState(false);
 
-    // Set a max-width close to the 1233px Figma width for large screens,
-    // but use a standard container for smaller screens.
+    // Function to check scroll position
+    const handleScroll = () => {
+        // Set scrolled to true if pageYOffset is greater than 10 (or any threshold)
+        const offset = window.scrollY;
+        if (offset > 10) {
+            setScrolled(true);
+        } else {
+            setScrolled(false);
+        }
+    };
+
+    // 3. Set up and clean up the scroll event listener
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        // Clean up the event listener when the component unmounts
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []); // Empty dependency array ensures this runs only once
+
     const desktopMaxWidth = "max-w-[1233px]";
-
-    // The Tailwind color for the logo background is inferred as a deep purple
     const logoBgColor = "bg-[#6A0DAD]";
 
+    // 4. Conditional styling for the blur effect
+    const navbarClasses = scrolled
+        ? "bg-black/30 backdrop-blur-md shadow-lg" // Classes when scrolled
+        : "bg-transparent"; // Classes when at the top (transparent)
+
     return (
-        // The outer section is fixed and full width
-        <section className="fixed top-0 left-0 w-full py-[34px]  z-50">
+        // Apply the conditional classes along with the fixed positioning
+        <section
+            className={`fixed top-0 left-0 w-full py-[34px] z-50 transition-all duration-300 ${navbarClasses}`}
+        >
             {/* Inner container centers the content and restricts its width */}
             <div className={`mx-auto w-[96%] sm:w-[94%] ${desktopMaxWidth}`}>
                 {/* Main Nav Flex Container: LOGO/Title (Left) | Links (Center) | Button (Right) */}
-                {/* Use justify-between to push the logo/links/button to the edges */}
                 <div className="flex justify-between items-center h-10 ml-7">
                     {/* 1. Logo and Title (Left Side) */}
                     <div className="flex items-center space-x-2">
@@ -51,7 +73,6 @@ export default function Navbar() {
                         </div>
                         <Link
                             href={"/"}
-                            // Ensuring the text remains readable on mobile
                             className="text-white text-lg font-bold font-poppins tracking-wider whitespace-nowrap"
                         >
                             Eyoha Digitals
@@ -78,7 +99,7 @@ export default function Navbar() {
                         <Link href="#contact">
                             <button
                                 className="bg-[#6A0DAD] text-white text-sm font-medium h-10 px-6 
-                                           hover:bg-[#6A0DAD] transition duration-200 shadow-lg w-[132.86px] max-w-[132.86px] rounded-md"
+                                hover:bg-[#6A0DAD] transition duration-200 shadow-lg w-[132.86px] max-w-[132.86px] rounded-md"
                                 style={{ maxWidth: "132.86px" }}
                             >
                                 Get Started
@@ -113,9 +134,9 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Menu (Conditionally rendered when 'isOpen' is true) */}
-            {/* It sits directly below the main header and spans the container width */}
             {isOpen && (
                 <div
+                    // Note: Mobile menu is intentionally kept solid for better readability on smaller screens
                     className={`md:hidden bg-purple-900 mx-auto w-[96%] sm:w-[94%] p-4 rounded-b-lg mt-2`}
                 >
                     <nav className="flex flex-col space-y-2 text-white">
