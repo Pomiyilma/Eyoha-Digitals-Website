@@ -34,7 +34,7 @@ const GuaranteeCard = ({
                         {part.includes("real impact") ? (
                             <span>
                                 {part.split("real impact")[0]}
-                                <span className="text-[#8B5CF6] font-medium">
+                                <span className="text-[#9333EA] font-medium">
                                     real impact
                                 </span>
                                 {part.split("real impact")[1]}
@@ -42,7 +42,7 @@ const GuaranteeCard = ({
                         ) : part.includes("customized for your business") ? (
                             <span>
                                 Every strategy is{" "}
-                                <span className="text-[#F97316] font-medium">
+                                <span className="text-[#EA580C] font-medium">
                                     customized for your business
                                 </span>
                                 {part.split("customized for your business")[1]}
@@ -50,7 +50,7 @@ const GuaranteeCard = ({
                         ) : part.includes("our priority") ? (
                             <span>
                                 {part.split("our priority")[0]}
-                                <span className="text-[#8B5CF6] font-medium">
+                                <span className="text-[#9333EA] font-medium">
                                     our priority
                                 </span>
                                 {part.split("our priority")[1]}
