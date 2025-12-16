@@ -49,22 +49,26 @@ export default function Hero() {
                 </div>
 
                 {/* 2. Sub-Headline/Description */}
-                <p className="text-gray-300 text-lg md:text-lg font-normal mb-10 w-full max-w-[700px] lg:pl-10">
+                <p className="text-gray-300 text-lg md:text-lg font-normal mb-10 w-full max-w-[700px] lg:pl-12">
                     We help brands thrive in the digital age through tailored,
                     data-driven marketing solutions that deliver measurable
                     growth and lasting impact.
                 </p>
 
                 {/* 3. Call-to-Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-[24px] mb-20 items-center lg:pl-10 h-[64px]">
+                <div className="flex flex-col sm:flex-row gap-3 mb-12 items-center lg:pl-12 h-[64px]">
                     {/* Button 1: Solid Purple ("Let's Talk") */}
                     <Link href="#contact">
                         <button
-                            className={`flex items-center space-x-2 text-white text-base font-semibold px-8 w-[224.09px] max-w-[224.09px] h-[64px]  rounded-lg 
+                            className={`flex mx-auto items-center space-x-2 text-white text-base font-semibold px-8 w-[224.09px] max-w-[224.09px] h-[64px]  rounded-lg 
                                        ${purpleCTA} hover:bg-purple-700 transition duration-200 shadow-xl`}
                         >
-                            <span>Let's Talk</span>
-                            <ArrowRight size={18} />
+                            <span
+                                className="mx-auto flex flex-row items-center space-x-2
+                                "
+                            >
+                                Let's Talk <ArrowRight size={18} />
+                            </span>
                         </button>
                     </Link>
 
@@ -88,7 +92,7 @@ export default function Hero() {
                 </div>
 
                 {/* 4. Stats Bar (10+, 95%, 24/7) */}
-                <div className="flex space-x-12  lg:pl-10">
+                <div className="flex space-x-12  lg:pl-12 pt-0 ">
                     {/* Stat 1: Happy Clients */}
                     <div className="flex flex-col items-start">
                         <span className="text-2xl font-extrabold text-white">
