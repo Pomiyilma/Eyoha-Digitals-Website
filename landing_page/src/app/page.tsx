@@ -1,4 +1,5 @@
 import AboutUs from "@/sections/AboutUs";
+import ClientSuccessStories from "@/sections/ClientSuccessStories";
 import Hero from "@/sections/Hero";
 import RecentWins from "@/sections/RecentWins";
 import OurServices from "@/sections/Services";
@@ -12,6 +13,7 @@ export default function Home() {
             <WhyUs />
             <OurServices />
             <RecentWins />
+            <ClientSuccessStories />
         </div>
     );
 }
