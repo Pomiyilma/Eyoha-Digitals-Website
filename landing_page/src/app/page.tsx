@@ -1,6 +1,7 @@
 import FeaturedClients from "@/components/FeaturedClients";
 import AboutUs from "@/sections/AboutUs";
 import ClientSuccessStories from "@/sections/ClientSuccessStories";
+import CtaSection from "@/sections/CtaSection";
 import EyohaGuarantee from "@/sections/EyohaGuarantee";
 import Hero from "@/sections/Hero";
 import PricingSection from "@/sections/Packages";
@@ -22,6 +23,7 @@ export default function Home() {
             <EyohaGuarantee />
             {/* <FeaturedClients /> */}
             <PricingSection />
+            <CtaSection />
         </div>
     );
 }
