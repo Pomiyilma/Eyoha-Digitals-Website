@@ -1,60 +1,87 @@
+// components/ServiceCard.tsx
 import React from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import Image, { ImageProps } from "next/image";
 
+// Update the icon prop to accept an imported asset OR a string/emoji.
+// We use 'any' here for simplicity to handle both ImageProps["src"] and string.
 interface ServiceCardProps {
-    iconBgColor: string;
-    iconSrc: string;
+    icon: any; // Can be ImageProps["src"] (for image files) or string (for 'SEO', '🎥', etc.)
     title: string;
     description: string;
+    linkText: string;
+    linkUrl: string;
+    iconBgClass: string;
+    thumbnailImage: ImageProps["src"];
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
-    iconBgColor,
-    iconSrc,
+    icon,
     title,
     description,
+    linkText,
+    linkUrl,
+    iconBgClass,
+    thumbnailImage,
 }) => {
-    // Custom style for the card shadow to match the Figma design (slight depth)
-    const cardShadow =
-        "shadow-lg hover:shadow-xl transition-shadow duration-300";
+    // Helper function to check if the 'icon' is an imported image object
+    const isImageObject =
+        typeof icon === "object" && icon !== null && "src" in icon;
 
     return (
-        <div className={`bg-white rounded-2xl p-6 md:p-8 h-full ${cardShadow}`}>
-            {/* Image Container */}
-            <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden">
-                <img
-                    src={iconSrc} // Using <img> for simplicity here, but Image component is recommended
-                    alt={`${title} visual`}
-                    className="w-full h-full object-cover"
+        <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 overflow-hidden">
+            {/* 1. Large Thumbnail Image Container */}
+            <div className="h-48 md:h-56 bg-gray-100 overflow-hidden relative">
+                <Image
+                    src={thumbnailImage}
+                    alt={`Thumbnail for ${title} service`}
+                    layout="fill"
+                    objectFit="cover"
                 />
             </div>
 
-            {/* Icon and Title */}
-            <div className="flex items-center space-x-3 mb-3">
-                {/* Small Accent Icon (Placeholder styling based on the design) */}
-                <div
-                    className={`w-6 h-6 rounded-md flex items-center justify-center`}
-                    style={{ backgroundColor: iconBgColor }}
-                >
-                    {/* Placeholder for the tiny icon (e.g., using a lighter version of the accent color) */}
-                    <div className="w-3 h-3 rounded-full border border-white"></div>
+            {/* 2. Card Body Content */}
+            <div className="p-6">
+                <div className="flex items-center space-x-3 mb-3">
+                    {/* Small Icon Circle Container */}
+                    <div
+                        className={`w-8 h-8 ${iconBgClass} text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 relative`}
+                    >
+                        {isImageObject ? (
+                            // RENDER IMAGE ASSET (e.g., hashIcon, paidAd)
+                            <Image
+                                src={icon}
+                                alt={`${title} icon`}
+                                // Set small, fixed sizes for the icon within the circle
+                                width={16}
+                                height={16}
+                                style={{ objectFit: "contain" }}
+                            />
+                        ) : // RENDER STRING/EMOJI/TEXT (e.g., '🎥', 'SEO')
+                        icon.length <= 3 ? (
+                            <span className="text-[10px] uppercase font-extrabold">
+                                {icon}
+                            </span>
+                        ) : (
+                            icon
+                        )}
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900 leading-snug">
+                        {title}
+                    </h3>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">{title}</h3>
+
+                <p className="text-gray-600 mb-6 text-sm line-clamp-4">
+                    {description}
+                </p>
+
+                <Link
+                    href={linkUrl}
+                    className="text-purple-600 hover:text-purple-700 font-medium text-sm transition duration-150 inline-flex items-center"
+                >
+                    {linkText}
+                </Link>
             </div>
-
-            {/* Description */}
-            <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                {description}
-            </p>
-
-            {/* Learn More Link */}
-            <Link href={`#services-${title.toLowerCase().replace(/\s/g, "-")}`}>
-                <span className="flex items-center text-sm font-semibold text-purple-700 hover:text-purple-500 transition duration-150">
-                    Learn More
-                    <ArrowRight size={16} className="ml-1" />
-                </span>
-            </Link>
         </div>
     );
 };

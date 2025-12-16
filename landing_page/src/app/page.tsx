@@ -10,6 +10,7 @@ import Hero from "@/sections/Hero";
 import PricingSection from "@/sections/Packages";
 import PricingPlans from "@/sections/PricingPlans";
 import RecentWins from "@/sections/RecentWins";
+import ServicesSection from "@/sections/Services";
 import OurServices from "@/sections/Services";
 import WhyUs from "@/sections/WhyUs";
 
@@ -19,7 +20,7 @@ export default function Home() {
             <Hero />
             <AboutUs />
             <WhyUs />
-            <OurServices />
+            <ServicesSection />
             <RecentWins />
             <ClientSuccessStories />
             {/* <PricingPlans /> */}
