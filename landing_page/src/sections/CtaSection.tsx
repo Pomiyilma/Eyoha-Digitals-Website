@@ -4,7 +4,7 @@ const CtaSection: React.FC = () => {
     return (
         <section className="px-6 py-12 md:py-24">
             {/* Container with the purple-to-indigo gradient */}
-            <div className="mx-auto max-w-7xl overflow-hidden rounded-3xl bg-gradient-to-r from-[#6366f1] via-[#8b5cf6] to-[#d946ef] p-8 md:p-16">
+            <div className="mx-auto max-w-7xl overflow-hidden rounded-3xl bg-gradient-to-r from-[#6A0DAD]  to-[#2C0547] p-8 md:p-16">
                 <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
                     {/* Left Column: Heading and Text */}
                     <div className="max-w-2xl text-center md:text-left">
@@ -22,7 +22,7 @@ const CtaSection: React.FC = () => {
                     <div className="flex-shrink-0">
                         <button
                             type="button"
-                            className="group flex items-center gap-2 rounded-full bg-[#f97316] px-8 py-4 text-lg font-semibold text-white shadow-xl transition-all hover:bg-[#ea580c] hover:scale-105 active:scale-95"
+                            className="group flex items-center gap-2 rounded-md bg-[#FF6600] px-8 py-4 text-lg font-semibold text-white shadow-xl transition-all hover:bg-[#ea580c] hover:scale-105 active:scale-95"
                         >
                             Schedule Your Consultation
                             <svg
