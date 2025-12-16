@@ -1,0 +1,51 @@
+// Renamed from Cardforaboutus to FeatureCard for clarity
+import React from "react";
+import Image from "next/image";
+
+interface FeatureCardProps {
+    iconSrc: string; // Placeholder for the icon image source
+    title: string;
+    description: string;
+}
+
+const FeatureCard: React.FC<FeatureCardProps> = ({
+    iconSrc,
+    title,
+    description,
+}) => {
+    // Custom box-shadow and border/ring style to match the subtle glow in the design
+    const cardStyle =
+        "shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-300";
+
+    return (
+        // The card container with matching padding and subtle rounded corners
+        <div className={`bg-white rounded-xl p-8 h-full ${cardStyle}`}>
+            {/* Icon Container: Light Purple Background, 64px x 64px */}
+            <div
+                className="w-16 h-16 mb-4 flex items-center justify-center rounded-lg bg-purple-50"
+                // Custom color for the light purple/pink icon background
+                style={{ backgroundColor: "#F9F4FF" }}
+            >
+                {/* Icon Placeholder (In a real scenario, you'd use the actual icon paths) */}
+                {/* Note: I'm using a placeholder div/Image for the inner icon, assuming a 32x32 size */}
+                <div className="w-8 h-8 relative">
+                    <Image
+                        src={iconSrc} // This should be the path to the actual icon file
+                        alt={`${title} icon`}
+                        width={32}
+                        height={32}
+                        style={{ objectFit: "contain" }}
+                    />
+                </div>
+            </div>
+
+            {/* Title */}
+            <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
+
+            {/* Description */}
+            <p className="text-gray-600 text-base">{description}</p>
+        </div>
+    );
+};
+
+export default FeatureCard;
