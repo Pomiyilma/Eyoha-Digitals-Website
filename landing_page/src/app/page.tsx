@@ -1,6 +1,9 @@
+import FeaturedClients from "@/components/FeaturedClients";
 import AboutUs from "@/sections/AboutUs";
 import ClientSuccessStories from "@/sections/ClientSuccessStories";
+import EyohaGuarantee from "@/sections/EyohaGuarantee";
 import Hero from "@/sections/Hero";
+import PricingSection from "@/sections/Packages";
 import PricingPlans from "@/sections/PricingPlans";
 import RecentWins from "@/sections/RecentWins";
 import OurServices from "@/sections/Services";
@@ -15,7 +18,10 @@ export default function Home() {
             <OurServices />
             <RecentWins />
             <ClientSuccessStories />
-            <PricingPlans />
+            {/* <PricingPlans /> */}
+            <EyohaGuarantee />
+            {/* <FeaturedClients /> */}
+            <PricingSection />
         </div>
     );
 }
