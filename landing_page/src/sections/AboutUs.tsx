@@ -1,13 +1,3 @@
-// export default function AboutUs() {
-//     return (
-//         <div className="py-[128px] px-[55px] ">
-//             <div className="flex flex-row">
-//                 <div className="bg-[#F97316] w-[32px] h-[1px] pl-[8px] justify-center items-center "></div>
-//                 <p className="text-[#F97316]">About Us</p>
-//             </div>
-//         </div>
-//     );
-// }
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
@@ -17,9 +7,9 @@ import aboutImage from "../assets/images/about.png";
 
 export default function WhoWeAre() {
     // Inferred colors from the Figma screenshot
-    const orangeAccent = "text-[#FF8C00]";
+    const orangeAccent = "text-[#F97316]";
     const purpleHeading = "text-[#6A0DAD]";
-    const orangeButtonBg = "bg-[#FF8C00]";
+    const orangeButtonBg = "bg-[#FF6600]";
 
     // The main content area width to match the overall design flow
     const contentMaxWidth = "max-w-[1233px]";
