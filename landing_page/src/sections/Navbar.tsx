@@ -28,7 +28,7 @@ export default function Navbar() {
 
     return (
         // The outer section is fixed and full width
-        <section className="fixed top-0 left-0 w-full py-7  z-50">
+        <section className="fixed top-0 left-0 w-full py-[34px]  z-50">
             {/* Inner container centers the content and restricts its width */}
             <div className={`mx-auto w-[96%] sm:w-[94%] ${desktopMaxWidth}`}>
                 {/* Main Nav Flex Container: LOGO/Title (Left) | Links (Center) | Button (Right) */}
@@ -60,7 +60,7 @@ export default function Navbar() {
 
                     {/* 2. Navigation Links (Center) - Hidden on Mobile, visible on MD and up */}
                     <div className="hidden md:flex items-center">
-                        <nav className="flex space-x-8 font-medium text-white text-sm">
+                        <nav className="flex space-x-8 font-medium text-[#FFFFFF] text-sm">
                             {navLinks.map((link) => (
                                 <a
                                     href={link.href}

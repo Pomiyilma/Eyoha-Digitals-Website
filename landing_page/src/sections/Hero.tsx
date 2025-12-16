@@ -38,10 +38,10 @@ export default function Hero() {
 
             {/* Main Content Wrapper - Centered and limited to 1280px */}
             <div
-                className={`relative mx-auto w-[92%] lg:w-[96%] ${contentMaxWidth} flex flex-col justify-start`}
+                className={`relative mx-auto w-[92%] lg:w-[96%] ${contentMaxWidth} flex flex-col justify-start `}
             >
                 {/* 1. Main Headline */}
-                <div className="text-white lg:pt-12 lg:pl-10 mb-6 w-[1152px] h-[84px] max-w-[1152px] leading-tight">
+                <div className="text-white lg:pt-12 lg:pl-9 lg:pb-14 mb-6 w-[1152px] h-[84px] max-w-[1152px] leading-tight">
                     <h1 className="text-3xl md:text-6xl font-bold font-poppins ">
                         Strategy. Creativity.
                         <span className={resultsColor}>Results.</span>

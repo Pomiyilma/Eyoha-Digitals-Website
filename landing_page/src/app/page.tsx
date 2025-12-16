@@ -15,7 +15,7 @@ import WhyUs from "@/sections/WhyUs";
 
 export default function Home() {
     return (
-        <div className="pb-[10px]">
+        <div className="w-full">
             <Hero />
             <AboutUs />
             <WhyUs />
