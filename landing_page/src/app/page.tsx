@@ -5,6 +5,7 @@ import CtaSection from "@/sections/CtaSection";
 import ExcellenceSection from "@/sections/ExcellenceSection";
 import EyohaGuarantee from "@/sections/EyohaGuarantee";
 import EyohaGuaranteenew from "@/sections/EyohaGuaranteenew";
+import Footer from "@/sections/Footer";
 import Hero from "@/sections/Hero";
 import PricingSection from "@/sections/Packages";
 import PricingPlans from "@/sections/PricingPlans";
@@ -28,6 +29,7 @@ export default function Home() {
             <CtaSection />
             <EyohaGuaranteenew />
             <ExcellenceSection />
+            <Footer />
         </div>
     );
 }
