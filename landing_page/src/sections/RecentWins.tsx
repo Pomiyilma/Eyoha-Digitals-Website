@@ -57,28 +57,19 @@ export default function RecentWins() {
                 <div className="mx-auto max-w-3xl text-center mb-16">
                     {/* Orange Accent Label and Underline */}
                     <div className="flex flex-col items-center mb-4">
-                        <span
-                            className={`text-sm font-bold ${orangeAccent} uppercase tracking-widest`}
-                        >
-                            Recent Wins
-                        </span>
-                        {/* Horizontal line style inferred from image */}
-                        <div
-                            className={`w-16 h-0.5 ${orangeAccent} mt-1`}
-                            style={{ backgroundColor: "#FF8C00" }}
-                        ></div>
+                        <div className="flex items-center justify-center gap-3 mb-4">
+                            <div className="w-6 h-[2px] bg-orange-500" />
+                            <span className="text-3xl md:text-4xl font-extrabold text-[#6A0DAD]  tracking-widest">
+                                Recent Wins
+                            </span>
+                            <div className="w-6 h-[2px] bg-orange-500" />
+                        </div>
                     </div>
 
                     {/* Main Heading */}
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+                    <h2 className="text-sm text-gray-900/50 mb-4">
                         A quick look at how we help brands reach new levels.
                     </h2>
-
-                    {/* Accent line/divider (inferred from image) */}
-                    <div
-                        className="w-10 h-1 mx-auto"
-                        style={{ backgroundColor: "#F38181" }}
-                    ></div>
                 </div>
 
                 {/* 4-Card Win Grid */}

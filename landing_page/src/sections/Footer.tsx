@@ -1,5 +1,8 @@
 import React from "react";
 import { Linkedin, Twitter, Instagram, Facebook, Globe } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import logoImage from "../assets/images/Logo.png";
 
 // --- 1. DATA STRUCTURE ---
 
@@ -67,9 +70,21 @@ const Footer: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-12 pb-16">
                     {/* Column 1: Brand and Description */}
                     <div className="lg:col-span-1">
-                        <div className="flex items-center mb-4">
-                            {/* Placeholder for the Eyoha Digitals Logo (White icon/text) */}
-                            <Globe className="w-6 h-6 mr-2 text-white" />
+                        <div className="flex items-center mb-4 space-x-2">
+                            {/* Logo Image - Set to 15.75x28px as per your current code */}
+                            <div
+                                className={`w-[30px] h-[30px] bg-white flex items-center justify-center rounded-sm`}
+                            >
+                                {" "}
+                                <Image
+                                    src={logoImage}
+                                    alt="Eyoha Digitals Logo"
+                                    width={15.75}
+                                    height={28}
+                                    className="object-contain"
+                                />
+                            </div>
+
                             <span className="text-2xl font-bold">
                                 Eyoha Digitals
                             </span>
@@ -83,7 +98,7 @@ const Footer: React.FC = () => {
 
                     {/* Column 2: Quick Links */}
                     <div className="lg:col-span-1">
-                        <h4 className="text-lg font-semibold border-b-2 border-indigo-500 pb-2 mb-4 inline-block">
+                        <h4 className="text-lg font-semibold  pb-2 mb-4 inline-block">
                             Quick Links
                         </h4>
                         <ul className="space-y-3">
