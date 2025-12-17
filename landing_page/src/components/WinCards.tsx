@@ -1,14 +1,16 @@
 import React from "react";
 import Image from "next/image";
+import { LucideIcon } from "lucide-react";
 
 interface WinCardProps {
     metric: string;
     metricColor: string;
     title: string;
     description: string;
-    graphicSrc: string; // Placeholder for the unique graphic at the bottom
+    graphicSrc: any;
     iconBgColor: string;
-    iconSrc: string;
+    iconSrc: any;
+    BottomIcon: LucideIcon; // Receives the specific icon component
 }
 
 const WinCard: React.FC<WinCardProps> = ({
@@ -19,49 +21,40 @@ const WinCard: React.FC<WinCardProps> = ({
     graphicSrc,
     iconBgColor,
     iconSrc,
+    BottomIcon,
 }) => {
-    // Custom style for the subtle purple/white background and shadow
-    const cardStyle =
-        "bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center ";
-
     return (
-        <div className={cardStyle}>
+        <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col items-center text-center border border-gray-100">
             {/* Top Icon and Gradient Circle */}
             <div
-                className="w-[64px] h-[64px] relative flex items-center justify-center rounded-full mb-6"
-                style={{
-                    // This creates the gradient circle border effect seen in the Figma
-                    background: iconBgColor,
-                }}
+                className="w-[64px] h-[64px] relative flex items-center justify-center rounded-full mb-6 shrink-0"
+                style={{ background: iconBgColor }}
             >
-                {/* Inner Icon Placeholder */}
-                <div className="w-[20px] h-[28px] relative rounded-sm">
+                <div className="w-[24px] h-[24px] relative">
                     <Image
-                        src={iconSrc} // Path to the small icon inside the circle
+                        src={iconSrc}
                         alt={`${title} icon`}
                         fill
-                        style={{ objectFit: "contain" }}
+                        className="object-contain invert brightness-0" // Ensures the top white icon stands out
                     />
                 </div>
             </div>
 
             {/* Metric and Title */}
-            <h3 className={`text-4xl font-extrabold ${metricColor} mb-2`}>
+            <h3 className={`text-4xl font-black ${metricColor} mb-1 tracking-tight`}>
                 {metric}
             </h3>
-            <p
-                className={`text-lg font-bold ${metricColor} mb-4`}
-                style={{ color: metricColor }}
-            >
+            <p className={`text-lg font-bold ${metricColor} mb-4 uppercase tracking-tight`}>
                 {title}
             </p>
 
             {/* Description */}
-            <p className="text-gray-600 text-sm mb-6 h-16">{description}</p>
+            <p className="text-gray-500 text-sm leading-relaxed mb-8 h-12">
+                {description}
+            </p>
 
-            {/* Unique Graphic (Placeholder) */}
-            <div className="w-full h-32 relative mb-4 flex items-center justify-center">
-                {/* This section holds the unique visual for each card (e.g., chart, social icons) */}
+            {/* Unique Graphic Area */}
+            <div className="w-full h-32 relative mb-10 flex items-center justify-center">
                 <Image
                     src={graphicSrc}
                     alt={`${title} graphic`}
@@ -70,23 +63,14 @@ const WinCard: React.FC<WinCardProps> = ({
                 />
             </div>
 
-            {/* Bottom Accent Icon (Small orange launch icon) */}
-
-            <div
-                className="w-[64px] h-[64px] relative flex items-center justify-center rounded-full mb-6"
-                style={{
-                    background: iconBgColor,
-                }}
-            >
-                {/* Inner Icon Placeholder */}
-                <div className="w-[15px] h-[18px] relative rounded-sm">
-                    <Image
-                        src={iconSrc}
-                        alt={`${title} icon`}
-                        fill
-                        style={{ objectFit: "contain" }}
-                    />
-                </div>
+            {/* Bottom Accent Icon - Unique for each, Orange, No BG */}
+            <div className="mt-auto">
+                <BottomIcon 
+                    size={24} 
+                    color="#FF8C00" 
+                    strokeWidth={2.5} 
+                    fill={metric === "+1M" ? "#FF8C00" : "none"} // Fills the pie chart for the last card
+                />
             </div>
         </div>
     );

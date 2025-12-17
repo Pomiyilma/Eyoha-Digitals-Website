@@ -1,4 +1,7 @@
 import WinCard from "@/components/WinCards";
+import { Send, Rocket, MousePointer2, ChartPie } from "lucide-react";
+
+// Images (Ensure these paths are correct for your local setup)
 import growth from "../assets/images/seoIcon.png";
 import recentwin1 from "../assets/images/recentwin1.png";
 import recentwin2 from "../assets/images/recentwin2.png";
@@ -8,90 +11,80 @@ import recentwin4 from "../assets/images/recentwin4.png";
 const winsData = [
     {
         metric: "+300%",
-        metricColor: "text-purple-700", 
         title: "Reach in 3 Months",
         description:
             "From zero to viral. We helped XYZ build a fast growing digital presence.",
         graphicSrc: recentwin1,
-        iconBgColor: "linear-gradient(135deg, #6A0DAD, #FF8C00)", // Gradient for the top circle
+        iconBgColor: "linear-gradient(135deg, #6A0DAD, #FF8C00)",
         iconSrc: growth,
+        bottomIcon: Send,
     },
     {
         metric: "5x",
-        metricColor: "text-gray-900", // Dark text color for metric/title
         title: "Organic Traffic Growth",
         description: "A full SEO upgrade pushed ABC to the top search results.",
         graphicSrc: recentwin2,
         iconBgColor: "linear-gradient(135deg, #FF8C00, #F06A35)",
         iconSrc: growth,
+        bottomIcon: Rocket,
     },
     {
         metric: "400%",
-        metricColor: "text-gray-900",
         title: "Conversion Boost",
         description:
             "Smart ad targeting helped DEF turn clicks into paying customers.",
         graphicSrc: recentwin3,
         iconBgColor: "linear-gradient(135deg, #FF8C00, #6A0DAD)",
         iconSrc: growth,
+        bottomIcon: MousePointer2,
     },
     {
         metric: "+1M",
-        metricColor: "text-purple-700",
         title: "Lifetime Impressions",
         description:
             "A blended SMM strategy expanded brand awareness dramatically.",
         graphicSrc: recentwin4,
         iconBgColor: "linear-gradient(135deg, #6A0DAD, #9C33D2)",
         iconSrc: growth,
+        bottomIcon: ChartPie,
     },
 ];
 
 export default function RecentWins() {
-    // Inferred colors from the Figma screenshot
-    const orangeAccent = "text-[#FF8C00]";
-
-    // The main content area width to match the overall design flow
-    const contentMaxWidth = "max-w-[1233px]";
-
     return (
-        <section className="py-24 md:py-32 bg-gray-50/50">
-            <div className={`mx-auto w-[92%] lg:w-[96%] ${contentMaxWidth}`}>
-                {/* Heading and Sub-text Container */}
-                <div className="mx-auto max-w-3xl text-center mb-16">
-                    {/* Orange Accent Label and Underline */}
-                    <div className="flex flex-col items-center mb-4">
-                        <div className="flex items-center justify-center gap-3 mb-4">
-                            <div className="w-6 h-[2px] bg-orange-500" />
-                            <span className="text-3xl md:text-4xl font-extrabold text-[#6A0DAD]  tracking-widest">
-                                Recent Wins
-                            </span>
-                            <div className="w-6 h-[2px] bg-orange-500" />
-                        </div>
+        <section className="py-24 bg-gray-50/30">
+            <div className="mx-auto max-w-[1233px] px-6">
+                {/* Heading Section */}
+                <div className="text-center mb-16">
+                    <div className="flex items-center justify-center gap-4 mb-2">
+                        <div className="w-8 h-[2px] bg-[#FF8C00]" />
+                        <h2 className="text-4xl md:text-5xl font-black text-[#6A0DAD]">
+                            Recent Wins
+                        </h2>
+                        <div className="w-8 h-[2px] bg-[#FF8C00]" />
                     </div>
-
-                    {/* Main Heading */}
-                    <h2 className="text-sm text-gray-900/50 mb-4">
+                    <p className="text-gray-400 font-medium text-sm">
                         A quick look at how we help brands reach new levels.
-                    </h2>
+                    </p>
                 </div>
 
-                {/* 4-Card Win Grid */}
+                {/* Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {winsData.map((win, index) => (
                         <WinCard
                             key={index}
                             metric={win.metric}
-                            metricColor={
-                                index === 0 || index === 3
-                                    ? "text-[#6A0DAD]"
-                                    : "text-gray-900"
-                            }
                             title={win.title}
                             description={win.description}
                             graphicSrc={win.graphicSrc}
                             iconBgColor={win.iconBgColor}
                             iconSrc={win.iconSrc}
+                            BottomIcon={win.bottomIcon}
+                            metricColor={
+                                index === 0 || index === 3
+                                    ? "text-[#6A0DAD]"
+                                    : "text-gray-900"
+                            }
                         />
                     ))}
                 </div>
