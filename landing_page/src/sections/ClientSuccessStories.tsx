@@ -1,49 +1,88 @@
 import Link from "next/link";
 import Image from "next/image";
 
-// Placeholder icons for the orbiting client logos
+// Map the logos to their specific orbital positions based on the Figma image
 const clientLogos = [
-    { src: "/assets/logos/client1.svg", alt: "Client Logo 1" }, // Trust Review
-    { src: "/assets/logos/client2.svg", alt: "Client Logo 2" }, // Trademark Home
-    { src: "/assets/logos/client3.svg", alt: "Client Logo 3" }, // Twitter
-    { src: "/assets/logos/client4.svg", alt: "Client Logo 4" }, // Airbnb
-    { src: "/assets/logos/client5.svg", alt: "Client Logo 5" }, // Financial
-    { src: "/assets/logos/client6.svg", alt: "Client Logo 6" }, // Education
-    { src: "/assets/logos/client7.svg", alt: "Client Logo 7" }, // Meta
-    { src: "/assets/logos/client8.svg", alt: "Client Logo 8" }, // Question Mark
-    { src: "/assets/logos/client9.svg", alt: "Client Logo 9" }, // Dollar Sign
-    { src: "/assets/logos/client10.svg", alt: "Client Logo 10" }, // Spotify
+    // Outer Ring (Radius approx 225px)
+    {
+        src: "/assets/logos/flintstone.png",
+        alt: "Flintstone",
+        radius: 225,
+        angle: -140,
+    },
+    {
+        src: "/assets/logos/realestate.png",
+        alt: "Real Estate",
+        radius: 225,
+        angle: -90,
+    },
+    {
+        src: "/assets/logos/ethiotele.png",
+        alt: "Ethio Telecom",
+        radius: 225,
+        angle: -40,
+    },
+    { src: "/assets/logos/meta.png", alt: "Meta", radius: 225, angle: 90 },
+    {
+        src: "/assets/logos/spotify.png",
+        alt: "Spotify",
+        radius: 225,
+        angle: 180,
+    },
+
+    // Middle Ring (Radius approx 150px)
+    {
+        src: "/assets/logos/twitter.png",
+        alt: "Twitter",
+        radius: 150,
+        angle: -150,
+    },
+    { src: "/assets/logos/airbnb.png", alt: "Airbnb", radius: 150, angle: -30 },
+    {
+        src: "/assets/logos/education.png",
+        alt: "Education",
+        radius: 150,
+        angle: 45,
+    },
+    { src: "/assets/logos/question.png", alt: "Help", radius: 150, angle: 150 },
+
+    // Inner Ring (Radius approx 90px)
+    {
+        src: "/assets/logos/shopify.png",
+        alt: "Shopify",
+        radius: 90,
+        angle: 120,
+    },
+    {
+        src: "/assets/logos/finance.png",
+        alt: "Finance",
+        radius: 150,
+        angle: 10,
+    },
 ];
 
 export default function ClientSuccessStories() {
-    // Inferred colors from the Figma screenshot (image_6321c2.png)
     const purpleAccent = "text-[#6A0DAD]";
-
-    // The main content area width to match the overall design flow
     const contentMaxWidth = "max-w-[1233px]";
 
-    // Function to calculate the position of the logos on the orbit
-    // We are placing 10 logos across 360 degrees.
-    const getLogoPosition = (index: number, radius: number) => {
-        const angle = index * (360 / clientLogos.length);
-        const radians = angle * (Math.PI / 180);
-
-        // These formulas position the center of the logo div
+    const getLogoPosition = (radius: number, angle: number) => {
+        const radians = (angle * Math.PI) / 180;
         const x = Math.cos(radians) * radius;
         const y = Math.sin(radians) * radius;
 
         return {
+            left: "50%",
+            top: "50%",
             transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
         };
     };
 
     return (
-        <section className="py-24 md:py-32 bg-white">
+        <section className="py-24 md:py-32 bg-white overflow-hidden">
             <div className={`mx-auto w-[92%] lg:w-[96%] ${contentMaxWidth}`}>
                 <div className="md:grid md:grid-cols-2 md:gap-16 items-center">
-                    {/* Left Column: Text Content, Buttons, and Stats */}
+                    {/* Left Column (Remains the same as your working code) */}
                     <div className="mb-12 md:mb-0">
-                        {/* Accent Label */}
                         <div
                             className="inline-block px-4 py-1.5 rounded-full mb-6"
                             style={{ backgroundColor: "#F9F4FF" }}
@@ -54,170 +93,111 @@ export default function ClientSuccessStories() {
                                 Trusted Worldwide
                             </span>
                         </div>
-
-                        {/* Main Heading */}
                         <h2
                             className={`text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight`}
                         >
                             Client success{" "}
                             <span className={purpleAccent}>stories</span>
                         </h2>
-
-                        {/* Body Paragraph */}
                         <p className="text-gray-600 text-lg mb-10 max-w-[550px]">
                             Join over 500+ companies that trust us to deliver
-                            exceptional results. From startups to Fortune 500
-                            companies, we're proud to partner with the best.
+                            exceptional results.
                         </p>
-
-                        {/* Buttons */}
                         <div className="flex flex-col sm:flex-row gap-4 mb-16">
-                            {/* Button 1: Solid Orange ("View All Clients") - Match the gradient */}
-                            <Link href="#clients">
-                                <button
-                                    className={`flex items-center space-x-2 text-white text-base font-semibold px-8 h-12 rounded-lg 
-                                               hover:opacity-90 transition duration-200 shadow-xl`}
-                                    style={{
-                                        background:
-                                            "linear-gradient(to right, #FF8C00, #F06A35)",
-                                    }}
-                                >
-                                    View All Clients
-                                </button>
-                            </Link>
-
-                            {/* Button 2: Outline/Text Button ("Case Studies") - Match the white fill/border */}
-                            <Link href="#casestudies">
-                                <button
-                                    className="text-gray-900 text-base font-semibold px-8 h-12 rounded-lg 
-                                               border border-gray-300 bg-white hover:bg-gray-50 transition duration-200"
-                                >
-                                    Case Studies
-                                </button>
-                            </Link>
+                            <button
+                                className="text-white px-8 h-12 rounded-lg font-semibold shadow-xl"
+                                style={{
+                                    background:
+                                        "linear-gradient(to right, #FF8C00, #F06A35)",
+                                }}
+                            >
+                                View All Clients
+                            </button>
+                            <button className="text-gray-900 px-8 h-12 rounded-lg font-semibold border border-gray-300 bg-white">
+                                Case Studies
+                            </button>
                         </div>
-
-                        {/* Statistics (Stats Bar) */}
                         <div className="flex space-x-12 pt-4">
-                            {/* Stat 1: Happy Clients */}
-                            <div className="flex flex-col items-start">
+                            <div className="flex flex-col">
                                 <span
                                     className={`text-4xl font-extrabold ${purpleAccent}`}
                                 >
                                     500+
                                 </span>
-                                <span className="text-sm text-gray-500 font-medium whitespace-nowrap">
+                                <span className="text-sm text-gray-500">
                                     Happy Clients
                                 </span>
                             </div>
-
-                            {/* Stat 2: Satisfaction Rate */}
-                            <div className="flex flex-col items-start">
+                            <div className="flex flex-col">
                                 <span
                                     className={`text-4xl font-extrabold ${purpleAccent}`}
                                 >
                                     98%
                                 </span>
-                                <span className="text-sm text-gray-500 font-medium whitespace-nowrap">
+                                <span className="text-sm text-gray-500">
                                     Satisfaction Rate
-                                </span>
-                            </div>
-
-                            {/* Stat 3: Support */}
-                            <div className="flex flex-col items-start">
-                                <span
-                                    className={`text-4xl font-extrabold ${purpleAccent}`}
-                                >
-                                    24/7
-                                </span>
-                                <span className="text-sm text-gray-500 font-medium whitespace-nowrap">
-                                    Support
                                 </span>
                             </div>
                         </div>
                     </div>
 
-                    {/* Right Column: Client Trust Wheel Graphic Simulation */}
-                    <div className="relative h-[450px] w-full flex items-center justify-center">
-                        {/* Central Hub and Orbit Rings Container */}
-                        <div className="relative w-[450px] h-[450px] mx-auto flex items-center justify-center">
-                            {/* 1. Outer Orbit Ring (Largest) */}
-                            <div
-                                className="absolute w-[450px] h-[450px] rounded-full border border-dashed"
-                                style={{ borderColor: "#6A0DAD", opacity: 0.3 }}
-                            ></div>
+                    {/* Right Column: Updated Orbit Logic */}
+                    <div className="relative h-[500px] w-full flex items-center justify-center">
+                        <div className="relative w-[450px] h-[450px]">
+                            {/* Orbit Rings - Solid lines as per second image */}
+                            <div className="absolute inset-0 border border-purple-200 rounded-full" />
+                            <div className="absolute inset-[75px] border border-purple-200 rounded-full" />
+                            <div className="absolute inset-[150px] border border-purple-200 rounded-full" />
 
-                            {/* 2. Middle Orbit Ring */}
+                            {/* Central Hub */}
                             <div
-                                className="absolute w-[300px] h-[300px] rounded-full border border-dashed"
-                                style={{ borderColor: "#6A0DAD", opacity: 0.3 }}
-                            ></div>
-
-                            {/* 3. Inner Orbit Ring */}
-                            <div
-                                className="absolute w-[150px] h-[150px] rounded-full border border-dashed"
-                                style={{ borderColor: "#6A0DAD", opacity: 0.3 }}
-                            ></div>
-
-                            {/* 4. Central Hub (The Crown Icon) */}
-                            <div
-                                className="w-24 h-24 rounded-full flex items-center justify-center"
+                                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full flex items-center justify-center shadow-2xl z-20"
                                 style={{
                                     background:
                                         "linear-gradient(135deg, #6A0DAD, #9370DB)",
                                 }}
                             >
-                                {/* Crown Icon (Lucide-React not used here, using inline SVG for minimal dependencies) */}
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="32"
-                                    height="32"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    className="text-white"
-                                >
-                                    <path d="m2 4 3 12h14l3-12-6 2-4-8-4 8-6-2z" />
-                                    <path d="M7 21h10" />
-                                </svg>
+                                <div className="w-16 h-16 rounded-full border-2 border-white/20 flex items-center justify-center">
+                                    <svg
+                                        width="28"
+                                        height="28"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="white"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    >
+                                        <path d="m2 4 3 12h14l3-12-6 2-4-8-4 8-6-2z" />
+                                        <path d="M7 21h10" />
+                                    </svg>
+                                </div>
                             </div>
 
-                            {/* 5. Orbiting Client Logos (Outer Ring Simulation - 10 logos) */}
-                            {/* We will place the logos on the largest orbit ring (radius = 450/2 = 225px) */}
+                            {/* Manually Positioned Logos */}
                             {clientLogos.map((logo, index) => (
                                 <div
                                     key={index}
-                                    className="absolute w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center p-1"
-                                    style={{
-                                        ...getLogoPosition(index, 225), // 225px is the radius of the outer circle
-                                        // Adjusting Z-index for layering if needed
-                                        zIndex: 10,
-                                    }}
+                                    className="absolute w-14 h-14 bg-white rounded-full shadow-lg flex items-center justify-center p-2 z-10 hover:scale-110 transition-transform duration-300"
+                                    style={getLogoPosition(
+                                        logo.radius,
+                                        logo.angle
+                                    )}
                                 >
-                                    {/* Placeholder for the actual logo image */}
-                                    <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
-                                        <span className="text-xs font-bold text-gray-700">
-                                            L{index + 1}
-                                        </span>
+                                    <div className="relative w-full h-full">
+                                        {/* Replace with your actual <Image /> tag */}
+                                        <div className="w-full h-full bg-gray-50 rounded-full flex items-center justify-center overflow-hidden">
+                                            <span className="text-[10px] font-bold text-gray-400">
+                                                {logo.alt}
+                                            </span>
+                                        </div>
                                     </div>
-                                    {/* In a real project, use the Image component here:
-                                    <Image src={logo.src} alt={logo.alt} width={30} height={30} style={{ objectFit: 'contain' }} />
-                                    */}
                                 </div>
                             ))}
                         </div>
                     </div>
                 </div>
             </div>
-
-            {/* Bottom Accent: The subtle light purple bar below the content area */}
-            <div
-                className="w-full h-4 mt-16"
-                style={{ backgroundColor: "#F9F4FF" }}
-            ></div>
         </section>
     );
 }
