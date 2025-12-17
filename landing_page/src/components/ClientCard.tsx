@@ -1,13 +1,12 @@
 import React from 'react';
 
-// Defining the interface directly in the component file
 interface ClientCardProps {
   companyName: string;
   tagline: string;
   logo: string;
   testimonial: string;
   category: string;
-  // We use 'orange' | 'purple' to match the visual dot/gradient colors in the UI
+  
   accentTheme: 'orange' | 'purple';
 }
 
@@ -21,7 +20,6 @@ export const ClientCard: React.FC<ClientCardProps> = ({
 }) => {
   const isOrange = accentTheme === 'orange';
   
-  // Tailwind logic for dynamic colors
   const dotColor = isOrange ? 'bg-orange-500' : 'bg-purple-500';
   const gradient = isOrange 
     ? 'from-purple-600 via-purple-400 to-orange-400' 
@@ -30,28 +28,26 @@ export const ClientCard: React.FC<ClientCardProps> = ({
   return (
     <div className="relative bg-white rounded-[2.5rem] p-10 shadow-[0_10px_40px_rgba(0,0,0,0.04)] flex flex-col items-center text-center border border-gray-50 hover:shadow-2xl transition-all duration-300 group">
       
-      {/* Small Accent Dot */}
+   
       <div className={`absolute top-8 right-8 w-2 h-2 rounded-full ${dotColor}`} />
 
-      {/* Circular Logo with thick dark border */}
       <div className="relative w-24 h-24 mb-6">
         <div className="w-full h-full rounded-full border-[3px] border-slate-900 overflow-hidden flex items-center justify-center bg-white shadow-sm">
           <img src={logo} alt={companyName} className="w-full h-full object-cover" />
         </div>
       </div>
 
-      {/* Titles */}
+    
       <div className="mb-6">
         <h3 className="text-[#8B5CF6] font-extrabold text-xl mb-0.5">{companyName}</h3>
         <p className="text-gray-400 text-sm font-medium">{tagline}</p>
       </div>
 
-      {/* Quote */}
+  
       <p className="text-gray-500 text-[15px] leading-relaxed mb-8 px-2 font-medium italic">
         {testimonial}
       </p>
 
-      {/* Gradient Divider & Category Label */}
       <div className="w-full flex items-center gap-4 mb-10">
         <div className={`h-[3px] flex-grow rounded-full bg-gradient-to-r ${gradient}`} />
         <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest whitespace-nowrap">
@@ -59,7 +55,7 @@ export const ClientCard: React.FC<ClientCardProps> = ({
         </span>
       </div>
 
-      {/* Card Button */}
+   
       <button className="bg-[#A855F7] hover:bg-[#9333EA] text-white px-10 py-3 rounded-xl font-bold text-sm transition-all transform group-hover:scale-105 shadow-lg shadow-purple-100">
         See Details
       </button>

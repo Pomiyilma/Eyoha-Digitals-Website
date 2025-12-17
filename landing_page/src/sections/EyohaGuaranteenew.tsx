@@ -18,7 +18,6 @@ const GuaranteeCard = ({
 }: GuaranteeCardProps) => {
     return (
         <div className="relative bg-white rounded-[24px] p-8 pt-12 shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-gray-50 flex flex-col h-full transition-transform hover:translate-y-[-5px] duration-300">
-            {/* Icon Circle */}
             <div
                 className={`absolute -top-6 left-8 w-12 h-12 rounded-full flex items-center justify-center text-white shadow-lg ${iconBgColor}`}
             >
@@ -28,7 +27,6 @@ const GuaranteeCard = ({
             <h3 className="text-[#0F172A] text-xl font-bold mb-4">{title}</h3>
 
             <p className="text-[#64748B] leading-relaxed text-[15px]">
-                {/* Simple logic to highlight specific words as seen in design */}
                 {description.split(",").map((part, i) => (
                     <React.Fragment key={i}>
                         {part.includes("real impact") ? (
@@ -63,7 +61,6 @@ const GuaranteeCard = ({
                 ))}
             </p>
 
-            {/* Decorative Bottom Gradient Line */}
             <div className="mt-auto pt-8">
                 <div className="w-12 h-[3px] rounded-full bg-gradient-to-r from-[#8B5CF6] to-[#F97316]" />
             </div>
@@ -92,18 +89,16 @@ export default function EyohaGuaranteenew() {
             title: "Your Growth",
             description:
                 "Your growth is — and we our priority stand behind every campaign we launch.",
-            iconBgColor: "bg-[#F97316]", // Matches the icon in image
+            iconBgColor: "bg-[#F97316]",
         },
     ];
 
     return (
         <section className="relative py-24 px-6 overflow-hidden bg-white">
-            {/* Background Decorative Blobs */}
             <div className="absolute top-10 left-[-5%] w-64 h-64 bg-[#F5F3FF] rounded-full blur-3xl -z-10 opacity-60" />
             <div className="absolute top-20 right-[-5%] w-48 h-48 bg-[#FFF7ED] rounded-full blur-3xl -z-10 opacity-80" />
 
             <div className="max-w-6xl mx-auto">
-                {/* Header Section */}
                 <div className="text-center mb-20">
                     <div className="w-20 h-[3px] bg-gradient-to-r from-[#8B5CF6] to-[#F97316] mx-auto mb-6" />
                     <h2 className="text-[#0F172A] text-4xl md:text-5xl font-extrabold tracking-tight">
@@ -112,7 +107,6 @@ export default function EyohaGuaranteenew() {
                     <div className="w-24 h-[3px] bg-gradient-to-r from-[#8B5CF6] to-[#F97316] mx-auto mt-6" />
                 </div>
 
-                {/* Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
                     {cards.map((card, index) => (
                         <GuaranteeCard key={index} {...card} />

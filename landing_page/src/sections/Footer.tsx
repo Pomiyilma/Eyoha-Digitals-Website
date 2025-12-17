@@ -4,8 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import logoImage from "../assets/images/Logo.png";
 
-// --- 1. DATA STRUCTURE ---
-
 const quickLinks = [
     { name: "Home", href: "#" },
     { name: "About Us", href: "#" },
@@ -23,9 +21,6 @@ const ourServices = [
     "Web Development",
 ];
 
-// --- 2. REUSABLE COMPONENTS ---
-
-// Component for the Social Media Icons
 const SocialLinks = () => (
     <div className="flex space-x-4 mt-6">
         <a
@@ -59,19 +54,13 @@ const SocialLinks = () => (
     </div>
 );
 
-// --- 3. MAIN FOOTER COMPONENT ---
-
 const Footer: React.FC = () => {
     return (
         <footer className="bg-purple-900 text-white pt-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Main Content Grid (Top Section) */}
-                {/* Responsive grid for the four columns: Brand, Quick Links, Services, Subscribe */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-12 pb-16">
-                    {/* Column 1: Brand and Description */}
                     <div className="lg:col-span-1">
                         <div className="flex items-center mb-4 space-x-2">
-                            {/* Logo Image - Set to 15.75x28px as per your current code */}
                             <div
                                 className={`w-[30px] h-[30px] bg-white flex items-center justify-center rounded-sm`}
                             >
@@ -96,7 +85,6 @@ const Footer: React.FC = () => {
                         <SocialLinks />
                     </div>
 
-                    {/* Column 2: Quick Links */}
                     <div className="lg:col-span-1">
                         <h4 className="text-lg font-semibold  pb-2 mb-4 inline-block">
                             Quick Links
@@ -115,7 +103,6 @@ const Footer: React.FC = () => {
                         </ul>
                     </div>
 
-                    {/* Column 3: Our Services */}
                     <div className="lg:col-span-1">
                         <h4 className="text-lg font-semibold pb-2 mb-4">
                             Our Service
@@ -132,7 +119,6 @@ const Footer: React.FC = () => {
                         </ul>
                     </div>
 
-                    {/* Column 4: Subscribe Form */}
                     <div className="lg:col-span-1">
                         <h4 className="text-lg font-semibold pb-2 mb-4">
                             Subscribe
@@ -157,7 +143,6 @@ const Footer: React.FC = () => {
                     </div>
                 </div>
 
-                {/* --- Bottom Footer Section (Copyright & Policies) --- */}
                 <div className="border-t border-purple-800 pt-6 pb-8 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-400">
                     <p>© 2025 Eyoha Digitals. All rights reserved.</p>
 

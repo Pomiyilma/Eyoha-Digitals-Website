@@ -12,9 +12,7 @@ import {
 const FeaturesSection = () => {
     return (
         <section className="w-full max-w-6xl mx-auto px-4 py-16 font-sans">
-            {/* Top Banner Card */}
             <div className="relative bg-[#FFF9F5] rounded-[40px] p-8 md:p-16 text-center overflow-hidden mb-20">
-                {/* Decorative Icons Row */}
                 <div className="flex justify-center items-center gap-4 mb-8">
                     <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg transform -rotate-3">
                         <Shield className="text-white w-7 h-7" />
@@ -40,9 +38,7 @@ const FeaturesSection = () => {
                 </p>
             </div>
 
-            {/* Bottom Features Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
-                {/* Feature 1 */}
                 <div className="flex flex-col items-center">
                     <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
                         <Users className="text-purple-600 w-6 h-6" />
@@ -55,7 +51,6 @@ const FeaturesSection = () => {
                     </p>
                 </div>
 
-                {/* Feature 2 */}
                 <div className="flex flex-col items-center">
                     <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
                         <Clock className="text-orange-600 w-6 h-6" />
@@ -66,7 +61,6 @@ const FeaturesSection = () => {
                     <p className="text-gray-500 text-sm">Always on schedule</p>
                 </div>
 
-                {/* Feature 3 */}
                 <div className="flex flex-col items-center">
                     <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mb-4">
                         <BarChart3 className="text-pink-600 w-6 h-6" />
@@ -79,7 +73,6 @@ const FeaturesSection = () => {
                     </p>
                 </div>
 
-                {/* Feature 4 */}
                 <div className="flex flex-col items-center">
                     <div className="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mb-4">
                         <Heart className="text-red-500 fill-red-500 w-6 h-6" />

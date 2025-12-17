@@ -1,4 +1,3 @@
-// components/CtaBanner.tsx
 import React from "react";
 import Link from "next/link";
 
@@ -9,7 +8,6 @@ const CtaBanner: React.FC = () => {
                 <div
                     className="p-12 md:p-16 rounded-3xl text-center shadow-2xl"
                     style={{
-                        // Custom Gradient matching the design: Purple to Orange
                         backgroundImage:
                             "linear-gradient(to right, #6B21A8, #F97316)",
                     }}

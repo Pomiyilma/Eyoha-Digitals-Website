@@ -1,17 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-
-// Assuming this is the path to the "Who We Are" image
 import aboutImage from "../assets/images/about.png";
 
 export default function WhoWeAre() {
-    // Inferred colors from the Figma screenshot
     const orangeAccent = "text-[#F97316]";
     const purpleHeading = "text-[#6A0DAD]";
     const orangeButtonBg = "bg-[#FF6600]";
-
-    // The main content area width to match the overall design flow
     const contentMaxWidth = "max-w-[1233px]";
 
     return (
@@ -20,11 +15,8 @@ export default function WhoWeAre() {
                 className={`mx-auto w-[92%] lg:w-[1280px] h-[404px] ${contentMaxWidth}`}
             >
                 <div className="md:grid md:grid-cols-2 md:gap-16 items-center">
-                    {/* Left Column: Text Content */}
                     <div className="mb-12 md:mb-0">
-                        {/* Orange Accent Label and Underline */}
                         <div className="flex flex-row mb-4">
-                            {/* Horizontal line style inferred from image */}
                             <div
                                 className={`w-10 h-0.5 ${orangeButtonBg} mt-2 `}
                             ></div>
@@ -35,14 +27,12 @@ export default function WhoWeAre() {
                             </span>
                         </div>
 
-                        {/* Main Heading */}
                         <h2
                             className={`text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight`}
                         >
                             Who<span className={purpleHeading}>We Are</span>
                         </h2>
 
-                        {/* Body Paragraph 1 */}
                         <p className="text-gray-600 text-lg mb-6 max-w-[550px]">
                             Eyoha Digitals is a results-driven digital marketing
                             and creative agency helping businesses build strong
@@ -50,7 +40,6 @@ export default function WhoWeAre() {
                             convert followers into customers.
                         </p>
 
-                        {/* Body Paragraph 2 */}
                         <p className="text-gray-600 text-lg mb-10 max-w-[550px]">
                             We blend strategy, creativity, and analytics to give
                             brands a modern, fresh, and high-impact digital
@@ -58,7 +47,6 @@ export default function WhoWeAre() {
                             marketing that works.
                         </p>
 
-                        {/* Orange Call-to-Action Button */}
                         <Link href="#about">
                             <button
                                 className={`flex items-center space-x-2 text-white text-base font-semibold px-8 h-12 rounded-lg 
@@ -70,18 +58,16 @@ export default function WhoWeAre() {
                         </Link>
                     </div>
 
-                    {/* Right Column: Image */}
                     <div className="relative h-[400px] md:h-[328px] w-full md:w-[601px]">
                         <div
                             className="absolute inset-0 rounded-[32px] overflow-hidden shadow-2xl"
-                            // Adding a custom rounded corner style to match the Figma's rounded image container
                             style={{ borderRadius: "32px" }}
                         >
                             <Image
                                 src={aboutImage}
                                 alt="Eyoha Digitals Team Meeting"
                                 fill
-                                style={{ objectFit: "cover" }} // Ensures the image covers the container
+                                style={{ objectFit: "cover" }}
                                 className="transform hover:scale-105 transition duration-500 ease-in-out"
                             />
                         </div>

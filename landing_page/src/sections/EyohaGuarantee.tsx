@@ -7,7 +7,7 @@ interface ClientCardProps {
     companyName: string;
     testimonial: string;
     category: string;
-    accentColor: string; // Used for the dot and gradient
+    accentColor: string;
 }
 
 const clientData: ClientCardProps[] = [
@@ -54,15 +54,13 @@ const ClientCard = ({
 
     return (
         <div className="relative bg-white rounded-2xl px-8 pb-8 pt-14 shadow-[0_8px_30px_rgb(0,0,0,0.06)] flex flex-col items-center text-center border border-gray-50 transition-transform hover:scale-[1.02] mt-10">
-            {/* Logo Container */}
             <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 z-10">
                 <div className="w-full h-full rounded-full border-4 border-white overflow-hidden flex items-center justify-center bg-white shadow-lg relative">
-                    {/* Fixed Image logic */}
                     <Image
                         src={logo}
                         alt={companyName}
                         fill
-                        className="object-contain p-2" // Use object-contain so logos aren't cropped
+                        className="object-contain p-2"
                     />
                 </div>
             </div>
@@ -103,7 +101,6 @@ export default function ClientSection() {
     return (
         <section className="bg-[#FDFDFD] py-20 px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
-                {/* Header */}
                 <div className="text-center mb-16">
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="w-6 h-[2px] bg-orange-500" />
@@ -122,15 +119,12 @@ export default function ClientSection() {
                     </p>
                 </div>
 
-                {/* Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                    {/* Mapping through 6 items for the demo */}
                     {[...clientData, ...clientData].map((client, idx) => (
                         <ClientCard key={idx} {...client} />
                     ))}
                 </div>
 
-                {/* Footer Button */}
                 <div className="flex justify-center">
                     <button className="bg-[#FF6600] hover:bg-[#E66000] text-white px-12 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-orange-200 md:w-[316px] ">
                         See All

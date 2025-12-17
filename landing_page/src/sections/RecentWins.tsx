@@ -4,11 +4,11 @@ import recentwin1 from "../assets/images/recentwin1.png";
 import recentwin2 from "../assets/images/recentwin2.png";
 import recentwin3 from "../assets/images/recentwin3.png";
 import recentwin4 from "../assets/images/recentwin4.png";
-// --- Data for the four win cards based on image_638320.png ---
+
 const winsData = [
     {
         metric: "+300%",
-        metricColor: "text-purple-700", // Custom purple color for metric/title
+        metricColor: "text-purple-700", 
         title: "Reach in 3 Months",
         description:
             "From zero to viral. We helped XYZ build a fast growing digital presence.",

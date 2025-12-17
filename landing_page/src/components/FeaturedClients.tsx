@@ -4,7 +4,7 @@ export default function FeaturedClients() {
     return (
         <section className="bg-white py-24 px-4">
             <div className="max-w-7xl mx-auto">
-                {/* ... Header Code ... */}
+           
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <ClientCard
@@ -25,7 +25,7 @@ export default function FeaturedClients() {
                         accentTheme="purple"
                     />
 
-                    {/* Add 4 more cards here */}
+                
                 </div>
             </div>
         </section>

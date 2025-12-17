@@ -31,16 +31,13 @@ export default function Hero() {
                 }}
             ></div>
 
-            {/* Navbar sits on top of the overlay */}
             <div className="absolute top-0 w-full">
                 <Navbar />
             </div>
 
-            {/* Main Content Wrapper - Centered and limited to 1280px */}
             <div
                 className={`relative mx-auto w-[92%] lg:w-[96%] ${contentMaxWidth} flex flex-col justify-start `}
             >
-                {/* 1. Main Headline */}
                 <div className="text-white lg:pt-12 lg:pl-[52px] lg:pb-14 mb-6 w-[1152px] h-[84px] max-w-[1152px] leading-tight">
                     <h1 className="text-3xl md:text-6xl font-bold font-poppins ">
                         Strategy. Creativity.
@@ -48,16 +45,13 @@ export default function Hero() {
                     </h1>
                 </div>
 
-                {/* 2. Sub-Headline/Description */}
                 <p className="text-gray-300 text-lg md:text-lg font-normal mb-10 w-full max-w-[700px] lg:pl-[52px]">
                     We help brands thrive in the digital age through tailored,
                     data-driven marketing solutions that deliver measurable
                     growth and lasting impact.
                 </p>
 
-                {/* 3. Call-to-Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3 mb-12 items-center lg:pl-[55px] h-[64px]">
-                    {/* Button 1: Solid Purple ("Let's Talk") */}
                     <Link href="#contact">
                         <button
                             className={`flex mx-auto items-center space-x-2 text-white text-base font-semibold px-8 w-[224.09px] max-w-[224.09px] h-[64px]  rounded-lg 
@@ -72,7 +66,6 @@ export default function Hero() {
                         </button>
                     </Link>
 
-                    {/* Button 2: Bordered/Outline ("View Our Work") */}
                     <Link href="#portfolio">
                         <button
                             className="flex items-center space-x-2 text-white text-base font-semibold px-8 w-[224.09px] max-w-[224.09px] h-[64px] rounded-lg 
@@ -91,9 +84,7 @@ export default function Hero() {
                     </Link>
                 </div>
 
-                {/* 4. Stats Bar (10+, 95%, 24/7) */}
                 <div className="flex space-x-12  lg:pl-12 pt-0 ">
-                    {/* Stat 1: Happy Clients */}
                     <div className="flex flex-col items-start">
                         <span className="text-2xl font-extrabold text-white">
                             10+
@@ -103,7 +94,6 @@ export default function Hero() {
                         </span>
                     </div>
 
-                    {/* Stat 2: Success Rate */}
                     <div className="flex flex-col items-start">
                         <span className="text-2xl font-extrabold text-white">
                             95%
@@ -113,7 +103,6 @@ export default function Hero() {
                         </span>
                     </div>
 
-                    {/* Stat 3: Support */}
                     <div className="flex flex-col items-start">
                         <span className="text-2xl font-extrabold text-white">
                             24/7

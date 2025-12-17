@@ -28,16 +28,14 @@ const WinCard: React.FC<WinCardProps> = ({
         <div className={cardStyle}>
             {/* Top Icon and Gradient Circle */}
             <div
-                className="w-24 h-24 relative flex items-center justify-center rounded-full mb-6"
+                className="w-[64px] h-[64px] relative flex items-center justify-center rounded-full mb-6"
                 style={{
                     // This creates the gradient circle border effect seen in the Figma
                     background: iconBgColor,
-                    boxShadow:
-                        "0 0 0 6px white, 0 0 0 8px rgba(106, 13, 173, 0.2)",
                 }}
             >
                 {/* Inner Icon Placeholder */}
-                <div className="w-12 h-12 relative rounded-sm">
+                <div className="w-[20px] h-[28px] relative rounded-sm">
                     <Image
                         src={iconSrc} // Path to the small icon inside the circle
                         alt={`${title} icon`}
@@ -73,11 +71,22 @@ const WinCard: React.FC<WinCardProps> = ({
             </div>
 
             {/* Bottom Accent Icon (Small orange launch icon) */}
-            <div className="w-8 h-8 flex items-center justify-center mt-4">
-                <span className="text-xl" style={{ color: "#FF8C00" }}>
-                    &#x1F680;
-                </span>{" "}
-                {/* Rocket emoji as a placeholder */}
+
+            <div
+                className="w-[64px] h-[64px] relative flex items-center justify-center rounded-full mb-6"
+                style={{
+                    background: iconBgColor,
+                }}
+            >
+                {/* Inner Icon Placeholder */}
+                <div className="w-[15px] h-[18px] relative rounded-sm">
+                    <Image
+                        src={iconSrc}
+                        alt={`${title} icon`}
+                        fill
+                        style={{ objectFit: "contain" }}
+                    />
+                </div>
             </div>
         </div>
     );
