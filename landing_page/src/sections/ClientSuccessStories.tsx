@@ -6,7 +6,7 @@ import tweeterImage from "../assets/images/tweeter.png";
 import Link from "next/link";
 import Image from "next/image";
 
-// Map the logos to their specific orbital positions based on the Figma image
+
 const clientLogos = [
     // Outer Ring (Radius approx 225px)
     {

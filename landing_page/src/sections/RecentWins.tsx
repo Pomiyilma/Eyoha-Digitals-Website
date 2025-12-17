@@ -1,7 +1,7 @@
 import WinCard from "@/components/WinCards";
 import { Send, Rocket, MousePointer2, ChartPie } from "lucide-react";
 
-// Images (Ensure these paths are correct for your local setup)
+
 import growth from "../assets/images/seoIcon.png";
 import recentwin1 from "../assets/images/recentwin1.png";
 import recentwin2 from "../assets/images/recentwin2.png";
