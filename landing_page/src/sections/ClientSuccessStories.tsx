@@ -1,3 +1,8 @@
+import FlintStoneImage from "../assets/images/flintstone.png";
+import EthioteleImage from "../assets/images/ethiotele.png";
+import RealStateImage from "../assets/images/realstate.png";
+import FinanceImage from "../assets/images/finance.png";
+import tweeterImage from "../assets/images/tweeter.png";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -5,13 +10,13 @@ import Image from "next/image";
 const clientLogos = [
     // Outer Ring (Radius approx 225px)
     {
-        src: "/assets/logos/flintstone.png",
+        src: FlintStoneImage,
         alt: "Flintstone",
         radius: 225,
         angle: -140,
     },
     {
-        src: "/assets/logos/realestate.png",
+        src: RealStateImage,
         alt: "Real Estate",
         radius: 225,
         angle: -90,
@@ -188,7 +193,13 @@ export default function ClientSuccessStories() {
                                         {/* Replace with your actual <Image /> tag */}
                                         <div className="w-full h-full bg-gray-50 rounded-full flex items-center justify-center overflow-hidden">
                                             <span className="text-[10px] font-bold text-gray-400">
-                                                {logo.alt}
+                                                <Image
+                                                    src={logo.src}
+                                                    width={20}
+                                                    height={20}
+                                                    alt={logo.alt}
+                                                    className="object-contain"
+                                                />
                                             </span>
                                         </div>
                                     </div>
