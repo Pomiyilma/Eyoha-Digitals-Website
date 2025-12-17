@@ -22,14 +22,14 @@ const clientLogos = [
         angle: -90,
     },
     {
-        src: "/assets/logos/ethiotele.png",
+        src: EthioteleImage,
         alt: "Ethio Telecom",
         radius: 225,
         angle: -40,
     },
-    { src: "/assets/logos/meta.png", alt: "Meta", radius: 225, angle: 90 },
+    { src: tweeterImage, alt: "Meta", radius: 225, angle: 90 },
     {
-        src: "/assets/logos/spotify.png",
+        src: FlintStoneImage,
         alt: "Spotify",
         radius: 225,
         angle: 180,
@@ -37,29 +37,29 @@ const clientLogos = [
 
     // Middle Ring (Radius approx 150px)
     {
-        src: "/assets/logos/twitter.png",
+        src: tweeterImage,
         alt: "Twitter",
         radius: 150,
         angle: -150,
     },
-    { src: "/assets/logos/airbnb.png", alt: "Airbnb", radius: 150, angle: -30 },
+    { src: FlintStoneImage, alt: "Airbnb", radius: 150, angle: -30 },
     {
-        src: "/assets/logos/education.png",
+        src: RealStateImage,
         alt: "Education",
         radius: 150,
         angle: 45,
     },
-    { src: "/assets/logos/question.png", alt: "Help", radius: 150, angle: 150 },
+    { src: FinanceImage, alt: "Help", radius: 150, angle: 150 },
 
     // Inner Ring (Radius approx 90px)
     {
-        src: "/assets/logos/shopify.png",
+        src: EthioteleImage,
         alt: "Shopify",
         radius: 90,
         angle: 120,
     },
     {
-        src: "/assets/logos/finance.png",
+        src: FinanceImage,
         alt: "Finance",
         radius: 150,
         angle: 10,
@@ -195,10 +195,10 @@ export default function ClientSuccessStories() {
                                             <span className="text-[10px] font-bold text-gray-400">
                                                 <Image
                                                     src={logo.src}
-                                                    width={20}
-                                                    height={20}
+                                                    width={80}
+                                                    height={80}
                                                     alt={logo.alt}
-                                                    className="object-contain"
+                                                    className="object-contain rounded-full"
                                                 />
                                             </span>
                                         </div>
