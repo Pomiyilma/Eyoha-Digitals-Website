@@ -1,4 +1,4 @@
-# Eyoha Digitals – Landing Page 🚀
+# Eyoha Digitals – Landing Page 
 
 This repository contains the source code for the official **Eyoha Digitals** landing page.  
 The website showcases Eyoha Digitals’ services, features, guarantees, and call-to-action sections with a modern and responsive design.
