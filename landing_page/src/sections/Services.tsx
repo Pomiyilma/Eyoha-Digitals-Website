@@ -6,7 +6,8 @@ import contentcreation from "../assets/images/contentcreation.png";
 import branding from "../assets/images/branding.png";
 import seo from "../assets/images/seo.png";
 import webdesign from "../assets/images/webdesign.png";
-import paidAd from "../assets/images/paidAd.png";
+// import paidAd from "../assets/images/paidAd.png";
+import paidAd from "../assets/images/paidAD.png"
 
 import hashIcon from "../assets/images/hashIcon.png";
 import cameraIcon from "../assets/images/cameraIcon.png";
