@@ -21,7 +21,6 @@ The website showcases Eyoha Digitals’ services, features, guarantees, and call
 - ⚡ Fast and optimized performance
 - 📱 Fully responsive design
 - 🎨 Clean and modern UI
-- 🎬 Smooth animations with Framer Motion
 - 🔧 Scalable component structure
 - 🌍 Deployed on Vercel
 
