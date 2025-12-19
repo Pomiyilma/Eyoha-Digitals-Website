@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image"; // Added StaticImageData
 import { LucideIcon } from "lucide-react";
 
 interface WinCardProps {
@@ -7,9 +7,9 @@ interface WinCardProps {
     metricColor: string;
     title: string;
     description: string;
-    graphicSrc: any;
+    graphicSrc: string | StaticImageData; // Changed from any
     iconBgColor: string;
-    iconSrc: any;
+    iconSrc: string | StaticImageData; // Changed from any
     BottomIcon: LucideIcon; // Receives the specific icon component
 }
 
@@ -41,10 +41,14 @@ const WinCard: React.FC<WinCardProps> = ({
             </div>
 
             {/* Metric and Title */}
-            <h3 className={`text-4xl font-black ${metricColor} mb-1 tracking-tight`}>
+            <h3
+                className={`text-4xl font-black ${metricColor} mb-1 tracking-tight`}
+            >
                 {metric}
             </h3>
-            <p className={`text-lg font-bold ${metricColor} mb-4 uppercase tracking-tight`}>
+            <p
+                className={`text-lg font-bold ${metricColor} mb-4 uppercase tracking-tight`}
+            >
                 {title}
             </p>
 
@@ -65,10 +69,10 @@ const WinCard: React.FC<WinCardProps> = ({
 
             {/* Bottom Accent Icon - Unique for each, Orange, No BG */}
             <div className="mt-auto">
-                <BottomIcon 
-                    size={24} 
-                    color="#FF8C00" 
-                    strokeWidth={2.5} 
+                <BottomIcon
+                    size={24}
+                    color="#FF8C00"
+                    strokeWidth={2.5}
                     fill={metric === "+1M" ? "#FF8C00" : "none"} // Fills the pie chart for the last card
                 />
             </div>

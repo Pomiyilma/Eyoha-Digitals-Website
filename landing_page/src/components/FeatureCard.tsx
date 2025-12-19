@@ -1,8 +1,9 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface FeatureCardProps {
-    iconSrc: string;
+    // Restrict this to only valid image types
+    iconSrc: string | StaticImageData;
     title: string;
     description: string;
 }
@@ -18,7 +19,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
     return (
         <div className={`bg-white rounded-xl p-8 h-full ${cardStyle}`}>
             <div
-                className="w-16 h-16 mb-4 flex items-center justify-center rounded-lg bg-purple-50"
+                className="w-16 h-16 mb-4 flex items-center justify-center rounded-lg bg-gradient-to-br from-[#7c3aed46] to-[#f9741660]"
                 style={{ backgroundColor: "#F9F4FF" }}
             >
                 <div className="w-8 h-8 relative">

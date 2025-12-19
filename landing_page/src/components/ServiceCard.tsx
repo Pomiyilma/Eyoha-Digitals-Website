@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import Image, { ImageProps } from "next/image";
 
+import Image, { ImageProps, StaticImageData } from "next/image";
 interface ServiceCardProps {
-    icon: any;
+    icon: string | StaticImageData | React.ReactNode; // Changed from any
     title: string;
     description: string;
     linkText: string;
@@ -21,9 +21,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     iconBgClass,
     thumbnailImage,
 }) => {
+    // const isImageObject =
+    //     typeof icon === "object" && icon !== null && "src" in icon;
+    // Check if it's an object with a src property (StaticImageData)
     const isImageObject =
         typeof icon === "object" && icon !== null && "src" in icon;
 
+    // Check if it's a short string (for the circle text)
+    const isShortString = typeof icon === "string" && icon.length <= 3;
     return (
         <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 overflow-hidden">
             <div className="h-48 md:h-56 bg-gray-100 overflow-hidden relative">
@@ -42,13 +47,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                     >
                         {isImageObject ? (
                             <Image
-                                src={icon}
+                                src={icon as StaticImageData} // Type assertion for safety
                                 alt={`${title} icon`}
                                 width={16}
                                 height={16}
                                 style={{ objectFit: "contain" }}
                             />
-                        ) : icon.length <= 3 ? (
+                        ) : isShortString ? (
                             <span className="text-[10px] uppercase font-extrabold">
                                 {icon}
                             </span>
