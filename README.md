@@ -13,7 +13,6 @@ The website showcases Eyoha Digitals’ services, features, guarantees, and call
 - **React 18**
 - **TypeScript**
 - **Tailwind CSS**
-- **Framer Motion** (animations)
 - **Lucide React & React Feather** (icons)
 
 ---
