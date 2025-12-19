@@ -1,1 +1,35 @@
-You can watch the live project at:   https://eyoha-digital.vercel.app/
+# Eyoha Digitals – Landing Page 🚀
+
+This repository contains the source code for the official **Eyoha Digitals** landing page.  
+The website showcases Eyoha Digitals’ services, features, guarantees, and call-to-action sections with a modern and responsive design.
+
+🌐 **Live Demo:** [ https://eyoha-digital.vercel.app/](https://eyohadigitalstech.vercel.app/)
+
+---
+
+## 🖥️ Tech Stack
+
+- **Next.js 14** (App Router)
+- **React 18**
+- **TypeScript**
+- **Tailwind CSS**
+- **Framer Motion** (animations)
+- **Lucide React & React Feather** (icons)
+
+---
+
+## 📁 Project Structure
+
+```text
+landing_page/
+├── public/                # Static assets
+├── src/
+│   ├── app/               # Next.js app router
+│   ├── assets/            # Images and media files
+│   ├── components/        # Reusable UI components
+│   └── sections/          # Page sections (Hero, About, Services, etc.)
+├── .eslintrc.json
+├── next.config.js
+├── tailwind.config.ts
+├── tsconfig.json
+├── package.json
