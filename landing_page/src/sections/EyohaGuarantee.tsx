@@ -1,9 +1,9 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import flintstone from "../assets/images/flintstone.png";
 import ethiotele from "../assets/images/ethiotele.png";
 interface ClientCardProps {
-    logo: string;
+    logo: string | StaticImageData;
     companyName: string;
     testimonial: string;
     category: string;
@@ -113,9 +113,9 @@ export default function ClientSection() {
                         Trusted by Industry Leaders
                     </h2>
                     <p className="max-w-2xl mx-auto text-gray-500 leading-relaxed">
-                        We've partnered with innovative companies to deliver
-                        exceptional digital experiences that drive growth and
-                        success.
+                        We&apos;ve partnered with innovative companies to
+                        deliver exceptional digital experiences that drive
+                        growth and success.
                     </p>
                 </div>
 

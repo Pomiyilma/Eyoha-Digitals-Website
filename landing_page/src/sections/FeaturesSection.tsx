@@ -14,7 +14,7 @@ const FeaturesSection = () => {
         <section className="w-full max-w-6xl mx-auto px-4 py-16 font-sans">
             <div className="relative bg-[#FFF9F5] rounded-[40px] p-8 md:p-16 text-center overflow-hidden mb-20">
                 <div className="flex justify-center items-center gap-4 mb-8">
-                    <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg transform -rotate-3">
+                    <div className="w-14 h-14 bg-gradient-to-br from-[#A855F7] to-[#9333EA] rounded-2xl flex items-center justify-center shadow-lg transform -rotate-3">
                         <Shield className="text-white w-7 h-7" />
                     </div>
                     <div className="w-2 h-[2px] bg-purple-200" />

@@ -3,9 +3,8 @@ import EthioteleImage from "../assets/images/ethiotele.png";
 import RealStateImage from "../assets/images/realstate.png";
 import FinanceImage from "../assets/images/finance.png";
 import tweeterImage from "../assets/images/tweeter.png";
-import Link from "next/link";
-import Image from "next/image";
 
+import Image from "next/image";
 
 const clientLogos = [
     // Outer Ring (Radius approx 225px)
@@ -141,6 +140,16 @@ export default function ClientSuccessStories() {
                                 </span>
                                 <span className="text-sm text-gray-500">
                                     Satisfaction Rate
+                                </span>
+                            </div>
+                            <div className="flex flex-col">
+                                <span
+                                    className={`text-4xl font-extrabold ${purpleAccent}`}
+                                >
+                                    24/7
+                                </span>
+                                <span className="text-sm text-gray-500">
+                                    Support
                                 </span>
                             </div>
                         </div>

@@ -7,7 +7,7 @@ const CtaSection: React.FC = () => {
                 <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
                     <div className="max-w-2xl text-center md:text-left">
                         <h2 className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
-                            Let's Build Something Great
+                            Let&apos;s Build Something Great
                         </h2>
                         <p className="text-lg text-white/90">
                             Join thousands of professionals who are already

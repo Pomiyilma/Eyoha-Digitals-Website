@@ -13,7 +13,7 @@ const GuaranteeCard = ({
     icon,
     title,
     description,
-    highlightText,
+    // highlightText,
     iconBgColor,
 }: GuaranteeCardProps) => {
     return (

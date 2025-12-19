@@ -1,13 +1,14 @@
 import WinCard from "@/components/WinCards";
-import { Send, Rocket, MousePointer2, ChartPie } from "lucide-react";
-
+import { TrendingUp, Rocket, ChartPie, Flame } from "lucide-react";
 
 import growth from "../assets/images/seoIcon.png";
+import searchIcon from "../assets/images/searchIcon.png";
 import recentwin1 from "../assets/images/recentwin1.png";
 import recentwin2 from "../assets/images/recentwin2.png";
 import recentwin3 from "../assets/images/recentwin3.png";
 import recentwin4 from "../assets/images/recentwin4.png";
-
+import boostcircles from "../assets/images/boostcircles.png";
+import eyeIcon from "../assets/images/eyeIcon.png";
 const winsData = [
     {
         metric: "+300%",
@@ -17,15 +18,15 @@ const winsData = [
         graphicSrc: recentwin1,
         iconBgColor: "linear-gradient(135deg, #6A0DAD, #FF8C00)",
         iconSrc: growth,
-        bottomIcon: Send,
+        bottomIcon: TrendingUp,
     },
     {
         metric: "5x",
         title: "Organic Traffic Growth",
         description: "A full SEO upgrade pushed ABC to the top search results.",
         graphicSrc: recentwin2,
-        iconBgColor: "linear-gradient(135deg, #FF8C00, #F06A35)",
-        iconSrc: growth,
+        iconBgColor: "linear-gradient(135deg, #FF8C00, #6A0DAD)",
+        iconSrc: searchIcon,
         bottomIcon: Rocket,
     },
     {
@@ -35,8 +36,8 @@ const winsData = [
             "Smart ad targeting helped DEF turn clicks into paying customers.",
         graphicSrc: recentwin3,
         iconBgColor: "linear-gradient(135deg, #FF8C00, #6A0DAD)",
-        iconSrc: growth,
-        bottomIcon: MousePointer2,
+        iconSrc: boostcircles,
+        bottomIcon: ChartPie,
     },
     {
         metric: "+1M",
@@ -44,9 +45,9 @@ const winsData = [
         description:
             "A blended SMM strategy expanded brand awareness dramatically.",
         graphicSrc: recentwin4,
-        iconBgColor: "linear-gradient(135deg, #6A0DAD, #9C33D2)",
-        iconSrc: growth,
-        bottomIcon: ChartPie,
+        iconBgColor: "linear-gradient(135deg, #FF8C00, #6A0DAD)",
+        iconSrc: eyeIcon,
+        bottomIcon: Flame,
     },
 ];
 

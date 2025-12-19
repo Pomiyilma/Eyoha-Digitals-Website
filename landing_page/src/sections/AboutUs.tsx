@@ -58,7 +58,7 @@ export default function WhoWeAre() {
                         </Link>
                     </div>
 
-                    <div className="relative h-[400px] md:h-[328px] w-full md:w-[601px]">
+                    <div className="relative h-[400px] md:h-[328px] w-full md:w-[601px] pr-4">
                         <div
                             className="absolute inset-0 rounded-[32px] overflow-hidden shadow-2xl"
                             style={{ borderRadius: "32px" }}

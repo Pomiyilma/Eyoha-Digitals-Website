@@ -65,9 +65,9 @@ export default function WhyUs() {
                     <p
                         className={`text-lg ${textGray} mx-auto max-w-[650px] mb-4`}
                     >
-                        We don't just post content; we build systems that grow
-                        your business. Here is why partners choose us to elevate
-                        their digital presence.
+                        We don&apos;t just post content; we build systems that
+                        grow your business. Here is why partners choose us to
+                        elevate their digital presence.
                     </p>
                 </div>
 

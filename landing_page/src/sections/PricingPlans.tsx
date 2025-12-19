@@ -1,7 +1,7 @@
 "use client";
-import PricingCard from "@/components/PricingCard";
-import React, { useState } from "react";
 
+import { PricingCard } from "@/components/PricingCard";
+import React, { useState } from "react";
 
 const pricingData = [
     {
@@ -10,7 +10,7 @@ const pricingData = [
         priceMonthly: "$299",
         priceAnnually: "$2900",
         isFeatured: false,
-        gradientStart: "#6A0DAD", 
+        gradientStart: "#6A0DAD",
         gradientEnd: "#9370DB",
         features: [
             { text: "1 Social Media Platform", included: true },
@@ -29,7 +29,7 @@ const pricingData = [
         priceAnnually: "$8000",
         isFeatured: true,
         gradientStart: "#FF8C00",
-        gradientEnd: "#F06A35", 
+        gradientEnd: "#F06A35",
         features: [
             { text: "3 Social Media Platforms", included: true },
             { text: "20 Graphics/Month + Video", included: true },
@@ -46,7 +46,7 @@ const pricingData = [
         priceMonthly: "$1499",
         priceAnnually: "$15000",
         isFeatured: false,
-        gradientStart: "#00BFFF", 
+        gradientStart: "#00BFFF",
         gradientEnd: "#00CED1",
         features: [
             { text: "All Social Media Platforms", included: true },
@@ -66,13 +66,11 @@ export default function PricingPlans() {
     const purpleAccent = "text-[#6A0DAD]";
     const orangeAccent = "text-[#FF8C00]";
 
-   
     const contentMaxWidth = "max-w-[1233px]";
 
     return (
         <section className="py-24 md:py-32 bg-gray-50/50">
             <div className={`mx-auto w-[92%] lg:w-[96%] ${contentMaxWidth}`}>
-             
                 <div className="mx-auto max-w-4xl text-center mb-16">
                     <span
                         className={`text-sm font-bold ${orangeAccent} uppercase tracking-widest`}
@@ -108,20 +106,16 @@ export default function PricingPlans() {
                     </div>
                 </div>
 
-    
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
                     {pricingData.map((plan, index) => (
+                        // Inside PricingPlans.tsx map function:
                         <PricingCard
                             key={index}
-                            planName={plan.planName}
-                            description={plan.description}
-                            price={
-                                isMonthly
-                                    ? plan.priceMonthly
-                                    : plan.priceAnnually
-                            }
+                            title={plan.planName} // Corrected prop name
+                            features={plan.features} // Now matches Feature[] type
+                            buttonText={isMonthly ? "Get Started" : "Save Now"} // Added required buttonText
                             isFeatured={plan.isFeatured}
-                            features={plan.features}
+                            // These props need to be added to PricingCardProps if you want to use them:
                             gradientStart={plan.gradientStart}
                             gradientEnd={plan.gradientEnd}
                         />

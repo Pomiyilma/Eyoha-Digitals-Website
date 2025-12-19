@@ -1,7 +1,7 @@
 import React from "react";
-import { Linkedin, Twitter, Instagram, Facebook, Globe } from "lucide-react";
+import { Linkedin, Twitter, Instagram, Facebook } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+
 import logoImage from "../assets/images/Logo.png";
 
 const quickLinks = [

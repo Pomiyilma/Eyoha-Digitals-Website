@@ -61,7 +61,7 @@ export default function Hero() {
                                 className="mx-auto flex flex-row items-center space-x-2
                                 "
                             >
-                                Let's Talk <ArrowRight size={18} />
+                                Let&apos;s Talk <ArrowRight size={18} />
                             </span>
                         </button>
                     </Link>
