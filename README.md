@@ -25,6 +25,23 @@ The website showcases Eyoha Digitals’ services, features, guarantees, and call
 - 🌍 Deployed on Vercel
 
 ---
+🚀 Getting Started
+1️⃣ Clone the repository
+
+```git clone https://github.com/your-username/landing-page.git ```
+
+2️⃣ Navigate into the project
+```cd landing-page```
+
+3️⃣ Install dependencies
+
+```npm install```
+
+4️⃣ Run the development server
+```npm run dev```
+
+
+
 ## 📁 Project Structure
 
 ```text
@@ -40,3 +57,6 @@ landing_page/
 ├── tailwind.config.ts
 ├── tsconfig.json
 ├── package.json
+
+
+
