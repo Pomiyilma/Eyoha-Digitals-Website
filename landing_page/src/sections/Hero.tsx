@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Navbar from "./Navbar";
-import backgroundImage from "../assets/images/herobannernew.png";
+import backgroundImage from "../assets/images/herobanner.png";
 import arrowatangle from "../assets/images/arrowatangle.png";
 
 import Image from "next/image";
