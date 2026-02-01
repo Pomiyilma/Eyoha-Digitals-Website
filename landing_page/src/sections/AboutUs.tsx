@@ -1,74 +1,82 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import aboutImage from "../assets/images/herobannernew.png";
+import aboutImage from "../assets/images/newLogo.png";
 
 export default function WhoWeAre() {
     const orangeAccent = "text-[#F97316]";
     const purpleHeading = "text-[#6A0DAD]";
     const orangeButtonBg = "bg-[#FF6600]";
-    const contentMaxWidth = "max-w-[1233px]";
 
     return (
-        <section className="pt-[128px] pb-[129] px-[55px] md:py-32">
-            <div
-                className={`mx-auto w-[92%] lg:w-[1280px] h-[404px] ${contentMaxWidth}`}
-            >
-                <div className="md:grid md:grid-cols-2 md:gap-16 items-center">
-                    <div className="mb-12 md:mb-0">
-                        <div className="flex flex-row mb-4">
+        // Replaced fixed padding with responsive padding
+        <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-[55px]">
+            <div className="mx-auto max-w-[1233px] w-full">
+                {/* 1. Removed h-[404px] - Let the content determine the height.
+          2. Stack on mobile (grid-cols-1), split on tablet/desktop (lg:grid-cols-2).
+        */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    {/* Text Content Area */}
+                    <div className="order-2 lg:order-1">
+                        <div className="flex items-center space-x-3 mb-4">
                             <div
-                                className={`w-10 h-0.5 ${orangeButtonBg} mt-2 `}
+                                className={`w-10 h-0.5 ${orangeButtonBg}`}
                             ></div>
                             <span
-                                className={`text-sm font-bold ${orangeAccent}`}
+                                className={`text-sm font-bold tracking-wider ${orangeAccent}`}
                             >
                                 ABOUT US
                             </span>
                         </div>
 
-                        <h2
-                            className={`text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight`}
-                        >
-                            Who<span className={purpleHeading}>We Are</span>
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+                            Who <span className={purpleHeading}>We Are</span>
                         </h2>
 
-                        <p className="text-gray-600 text-lg mb-6 max-w-[550px]">
-                            Eyoha Digitals is a results-driven digital marketing
-                            and creative agency helping businesses build strong
-                            online identities, reach the right audience, and
-                            convert followers into customers.
-                        </p>
+                        <div className="space-y-6 text-gray-600 text-base md:text-lg">
+                            <p>
+                                Eyoha Digitals is a results-driven digital
+                                marketing and creative agency helping businesses
+                                build strong online identities, reach the right
+                                audience, and convert followers into customers.
+                            </p>
+                            <p>
+                                We blend strategy, creativity, and analytics to
+                                give brands a modern, fresh, and high-impact
+                                digital presence. Our goal is simple: deliver
+                                exceptional marketing that works.
+                            </p>
+                        </div>
 
-                        <p className="text-gray-600 text-lg mb-10 max-w-[550px]">
-                            We blend strategy, creativity, and analytics to give
-                            brands a modern, fresh, and high-impact digital
-                            presence. Our goal is simple: deliver exceptional
-                            marketing that works.
-                        </p>
-
-                        <Link href="#about">
-                            <button
-                                className={`flex items-center space-x-2 text-white text-base font-semibold px-8 h-12 rounded-lg 
-                                           ${orangeButtonBg} hover:opacity-90 transition duration-200 shadow-lg`}
+                        <div className="mt-10">
+                            <Link
+                                href="#about"
+                                className="inline-block w-full sm:w-auto"
                             >
-                                <span>Learn More About Us</span>
-                                <ArrowRight size={18} />
-                            </button>
-                        </Link>
+                                <button
+                                    className={`flex items-center justify-center space-x-2 text-white text-base font-semibold px-8 h-12 w-full sm:w-auto rounded-lg 
+                             ${orangeButtonBg} hover:opacity-90 transition duration-200 shadow-lg`}
+                                >
+                                    <span>Learn More About Us</span>
+                                    <ArrowRight size={18} />
+                                </button>
+                            </Link>
+                        </div>
                     </div>
 
-                    <div className="relative h-[400px] md:h-[328px] w-full md:w-[601px] pr-4">
-                        <div
-                            className="absolute inset-0 rounded-[32px] overflow-hidden shadow-2xl"
-                            style={{ borderRadius: "32px" }}
-                        >
+                    {/* Image Area: 
+            1. Removed fixed width md:w-[601px].
+            2. Using aspect ratio to keep the image proportional.
+          */}
+                    <div className="order-1 lg:order-2 w-full">
+                        <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-square xl:aspect-[4/3] rounded-[32px] overflow-hidden shadow-2xl">
                             <Image
                                 src={aboutImage}
                                 alt="Eyoha Digitals Team Meeting"
                                 fill
-                                style={{ objectFit: "cover" }}
-                                className="transform hover:scale-105 transition duration-500 ease-in-out"
+                                priority
+                                className="object-cover transform hover:scale-105 transition duration-500 ease-in-out"
+                                sizes="(max-width: 768px) 100vw, 50vw"
                             />
                         </div>
                     </div>

@@ -81,7 +81,7 @@ export default function PricingSection() {
                             title={pkg.title}
                             features={pkg.features}
                             buttonText={pkg.buttonText}
-                            // isFeatured={pkg.isFeatured}
+                            isFeatured={pkg.isFeatured}
                         />
                     ))}
                 </div>

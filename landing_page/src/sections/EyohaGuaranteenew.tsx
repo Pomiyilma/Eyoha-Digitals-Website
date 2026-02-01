@@ -107,7 +107,7 @@ export default function EyohaGuaranteenew() {
                     <div className="w-24 h-[3px] bg-gradient-to-r from-[#8B5CF6] to-[#F97316] mx-auto mt-6" />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 ">
                     {cards.map((card, index) => (
                         <GuaranteeCard key={index} {...card} />
                     ))}

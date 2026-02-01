@@ -1,69 +1,88 @@
+import Image, { StaticImageData } from "next/image";
 import React from "react";
+import Link from "next/link";
 
+// 1. Define the interface once
 interface ClientCardProps {
+    id: string;
+    logo: string | StaticImageData;
     companyName: string;
-    tagline: string;
-    logo: string;
+    subcompanyName: string;
     testimonial: string;
     category: string;
-
-    accentTheme: "orange" | "purple";
+    accentColor: string;
+    tagline: string;
 }
 
-export const ClientCard: React.FC<ClientCardProps> = ({
-    companyName,
-    tagline,
+// ... (imports and interface remain the same)
+
+export const ClientCard = ({
+    id,
     logo,
+    companyName,
+    subcompanyName,
     testimonial,
     category,
-    accentTheme,
-}) => {
-    const isOrange = accentTheme === "orange";
-
-    const dotColor = isOrange ? "bg-orange-500" : "bg-purple-500";
-    const gradient = isOrange
-        ? "from-purple-600 via-purple-400 to-orange-400"
-        : "from-orange-400 via-purple-400 to-purple-600";
+    accentColor,
+    tagline, // Now being read below
+}: ClientCardProps) => {
+    const dotColor =
+        accentColor === "orange" ? "bg-orange-500" : "bg-purple-500";
+    const gradient =
+        accentColor === "orange"
+            ? "from-purple-500 to-orange-400"
+            : "from-orange-400 to-purple-500";
 
     return (
-        <div className="relative bg-white rounded-[2.5rem] p-10 shadow-[0_10px_40px_rgba(0,0,0,0.04)] flex flex-col items-center text-center border border-gray-50 hover:shadow-2xl transition-all duration-300 group">
-            <div
-                className={`absolute top-8 right-8 w-2 h-2 rounded-full ${dotColor}`}
-            />
-
-            <div className="relative w-24 h-24 mb-6">
-                <div className="w-full h-full rounded-full border-[3px] border-slate-900 overflow-hidden flex items-center justify-center bg-white shadow-sm">
-                    <img
+        <div className="relative bg-white rounded-2xl px-8 pb-8 pt-14 shadow-[0_8px_30px_rgb(0,0,0,0.06)] flex flex-col items-center text-center border border-gray-50 transition-transform hover:scale-[1.02] mt-10">
+            {/* Logo Section */}
+            <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 z-10">
+                <div className="w-full h-full rounded-full border-4 border-white overflow-hidden flex items-center justify-center bg-white shadow-lg relative">
+                    <Image
                         src={logo}
                         alt={companyName}
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-contain rounded-full"
                     />
                 </div>
             </div>
 
-            <div className="mb-6">
-                <h3 className="text-[#8B5CF6] font-extrabold text-xl mb-0.5">
-                    {companyName}
-                </h3>
-                <p className="text-gray-400 text-sm font-medium">{tagline}</p>
-            </div>
+            <div
+                className={`absolute top-6 right-6 w-2 h-2 rounded-full ${dotColor}`}
+            />
 
-            <p className="text-gray-500 text-[15px] leading-relaxed mb-8 px-2 font-medium italic">
+            {/* Tagline Addition: This resolves the 'unused variable' error */}
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-2">
+                {tagline}
+            </span>
+
+            <h3 className="text-[#7C3AED] font-bold text-lg mb-1">
+                {companyName}
+            </h3>
+
+            <p className="text-gray-400 text-sm mb-6 font-medium">
+                {subcompanyName}
+            </p>
+
+            <p className="text-gray-500 text-sm leading-relaxed italic mb-8 px-4">
                 {testimonial}
             </p>
 
-            <div className="w-full flex items-center gap-4 mb-10">
+            <div className="w-full mb-8 flex items-center gap-3 mt-auto">
                 <div
-                    className={`h-[3px] flex-grow rounded-full bg-gradient-to-r ${gradient}`}
+                    className={`h-1 flex-grow rounded-full bg-gradient-to-r ${gradient}`}
                 />
-                <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest whitespace-nowrap">
+                <span className="text-[10px] uppercase tracking-wider text-gray-400 whitespace-nowrap font-semibold">
                     {category}
                 </span>
             </div>
 
-            <button className="bg-[#A855F7] hover:bg-[#9333EA] text-white px-10 py-3 rounded-xl font-bold text-sm transition-all transform group-hover:scale-105 shadow-lg shadow-purple-100">
+            <Link
+                href={`/Details/${id}`}
+                className="w-full bg-[#A855F7] hover:bg-[#9333EA] text-white py-2.5 rounded-lg font-semibold text-sm transition-colors text-center block"
+            >
                 See Details
-            </button>
+            </Link>
         </div>
     );
 };

@@ -41,7 +41,7 @@ const FeaturesSection = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
                 <div className="flex flex-col items-center">
                     <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
-                        <Users className="text-purple-600 w-6 h-6" />
+                        <Users className="text-[#6A0DAD] w-6 h-6" />
                     </div>
                     <h3 className="font-bold text-gray-900 mb-1">
                         Expert Team
@@ -53,7 +53,7 @@ const FeaturesSection = () => {
 
                 <div className="flex flex-col items-center">
                     <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
-                        <Clock className="text-orange-600 w-6 h-6" />
+                        <Clock className="text-[#6A0DAD] w-6 h-6" />
                     </div>
                     <h3 className="font-bold text-gray-900 mb-1">
                         On-Time Delivery
@@ -63,7 +63,7 @@ const FeaturesSection = () => {
 
                 <div className="flex flex-col items-center">
                     <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mb-4">
-                        <BarChart3 className="text-pink-600 w-6 h-6" />
+                        <BarChart3 className="text-[#6A0DAD] w-6 h-6" />
                     </div>
                     <h3 className="font-bold text-gray-900 mb-1">
                         Data-Driven
@@ -75,7 +75,7 @@ const FeaturesSection = () => {
 
                 <div className="flex flex-col items-center">
                     <div className="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mb-4">
-                        <Heart className="text-red-500 fill-red-500 w-6 h-6" />
+                        <Heart className="text-[#6A0DAD] fill-[#6A0DAD] w-6 h-6" />
                     </div>
                     <h3 className="font-bold text-gray-900 mb-1">
                         Client-Focused

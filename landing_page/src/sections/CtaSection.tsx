@@ -3,7 +3,7 @@ import React from "react";
 const CtaSection: React.FC = () => {
     return (
         <section className="px-6 py-12 md:py-24">
-            <div className="mx-auto max-w-7xl overflow-hidden rounded-3xl bg-gradient-to-r from-[#6A0DAD]  to-[#2C0547] p-8 md:p-16">
+            <div className="mx-auto max-w-7xl overflow-hidden rounded-3xl bg-gradient-to-r bg-[#6A0DAD] p-8 md:p-16">
                 <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
                     <div className="max-w-2xl text-center md:text-left">
                         <h2 className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">

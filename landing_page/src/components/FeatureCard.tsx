@@ -19,15 +19,15 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
     return (
         <div className={`bg-white rounded-xl p-8 h-full ${cardStyle}`}>
             <div
-                className="w-16 h-16 mb-4 flex items-center justify-center rounded-lg bg-gradient-to-br from-[#7c3aed46] to-[#f9741660]"
+                className="w-16 h-16 mb-4 flex items-center justify-center rounded-lg "
                 style={{ backgroundColor: "#F9F4FF" }}
             >
-                <div className="w-8 h-8 relative">
+                <div className=" relative">
                     <Image
                         src={iconSrc}
                         alt={`${title} icon`}
-                        width={32}
-                        height={32}
+                        width={64}
+                        height={64}
                         style={{ objectFit: "contain" }}
                     />
                 </div>

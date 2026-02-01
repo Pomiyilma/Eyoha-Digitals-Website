@@ -5,13 +5,7 @@ const CtaBanner: React.FC = () => {
     return (
         <div className="py-16 md:py-20 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
-                <div
-                    className="p-12 md:p-16 rounded-3xl text-center shadow-2xl"
-                    style={{
-                        backgroundImage:
-                            "linear-gradient(to right, #6B21A8, #F97316)",
-                    }}
-                >
+                <div className="p-12 md:p-16 rounded-3xl text-center shadow-2xl bg-[#6A0DAD]">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
                         Ready to Transform Your Digital Presence?
                     </h2>

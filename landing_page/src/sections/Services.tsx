@@ -1,13 +1,11 @@
 import ServiceCard from "@/components/ServiceCard";
 import React from "react";
-
 import socialmedia from "../assets/images/socialmedia.png";
 import contentcreation from "../assets/images/contentcreation.png";
 import branding from "../assets/images/branding.png";
 import seo from "../assets/images/seo.png";
 import webdesign from "../assets/images/webdesign.png";
 import paidAd from "../assets/images/paidAD.png";
-
 import hashIcon from "../assets/images/hashIcon.png";
 import cameraIcon from "../assets/images/cameraIcon.png";
 import seoIcon from "../assets/images/seoIcon.png";
@@ -92,7 +90,7 @@ const ServicesSection: React.FC = () => {
                     <p className="mt-2 text-xl text-gray-500 max-w-3xl mx-auto">
                         Elevate your brand with our comprehensive suite of
                         digital solutions designed to drive growth and
-                        engagement
+                        engagement.
                     </p>
                 </div>
 

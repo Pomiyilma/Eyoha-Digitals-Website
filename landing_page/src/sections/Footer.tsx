@@ -2,7 +2,7 @@ import React from "react";
 import { Linkedin, Twitter, Instagram, Facebook } from "lucide-react";
 import Image from "next/image";
 
-import logoImage from "../assets/images/Logo.png";
+import logoImage from "../assets/images/eyohalogo.png";
 
 const quickLinks = [
     { name: "Home", href: "#" },
@@ -62,14 +62,14 @@ const Footer: React.FC = () => {
                     <div className="lg:col-span-1">
                         <div className="flex items-center mb-4 space-x-2">
                             <div
-                                className={`w-[30px] h-[30px] bg-white flex items-center justify-center rounded-sm`}
+                                className={`w-[40px] h-[40px]  flex items-center justify-center rounded-sm`}
                             >
                                 {" "}
                                 <Image
                                     src={logoImage}
                                     alt="Eyoha Digitals Logo"
-                                    width={15.75}
-                                    height={28}
+                                    width={40}
+                                    height={40}
                                     className="object-contain"
                                 />
                             </div>
