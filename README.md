@@ -40,7 +40,7 @@ The website showcases Eyoha Digitals’ services, features, guarantees, and call
 4️⃣ Run the development server
 ```npm run dev```
 
-
+-Contributed-Ayalkbet Teketel
 
 ## 📁 Project Structure
 
