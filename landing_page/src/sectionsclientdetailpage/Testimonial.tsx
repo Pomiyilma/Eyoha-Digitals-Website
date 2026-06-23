@@ -18,10 +18,10 @@ export const Testimonial = ({
     testimonial,
     accentColor = "#F97316",
 }: TestimonialProps) => (
-    <section className="py-24 px-6 bg-[#E5E7EB]">
+    <section className="py-24 px-6 bg-[#F9FAFB]">
         <div className="max-w-4xl mx-auto rounded-[2.5rem] p-10 md:p-16 shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-gray-100 text-center relative bg-white">
             {/* Quote Icon - Positioned exactly half-way off the top border */}
-            <div className="absolute -top-7 left-1/2 -translate-x-1/2 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-lg shadow-orange-200 bg-[#F97316]">
+            <div className="absolute -top-7 left-1/2 -translate-x-1/2 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-lg" style={{ backgroundColor: accentColor }}>
                 <Quote size={22} fill="#fff" className="opacity-90" />
             </div>
 
