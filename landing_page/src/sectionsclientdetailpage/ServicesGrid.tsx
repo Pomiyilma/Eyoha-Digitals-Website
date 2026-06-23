@@ -13,7 +13,7 @@ interface ServicesGridProps {
     accentColor?: string;
 }
 
-export const ServicesGrid = ({ services }: ServicesGridProps) => (
+export const ServicesGrid = ({ services, accentColor = "#7C3AED" }: ServicesGridProps) => (
     <div className="w-full bg-[#F9FAFB] ">
         {" "}
         <section className="py-20 px-6 max-w-7xl mx-auto font-poppins  ">
@@ -28,7 +28,7 @@ export const ServicesGrid = ({ services }: ServicesGridProps) => (
                         className="p-10 rounded-[2.5rem] bg-white border border-gray-50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 flex flex-col items-start"
                     >
                         {/* Icon Container */}
-                        <div className="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-8 shadow-sm bg-[#F97316]">
+                        <div className="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-8 shadow-sm" style={{ backgroundColor: accentColor }}>
                             {/* Scaling the icon to match Figma proportions */}
                             {React.cloneElement(s.icon as React.ReactElement, {
                                 size: 20,

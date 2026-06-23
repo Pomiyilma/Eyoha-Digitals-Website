@@ -10,21 +10,20 @@ interface HeroChallengesProps {
     challenges: string[];
     accentColor?: string;
 }
-const BRAND_RED = "#8B1538"; // Standardized color from Figma
 export const HeroChallenges = (
     {
         companyName,
         logo,
         description,
         challenges,
-    }: // accentColor = "#7C3AED",
-    HeroChallengesProps // 2. Replace 'any' with the interface
+        accentColor = "#7C3AED",
+    }: HeroChallengesProps // 2. Replace 'any' with the interface
 ) => (
     <section className="relative py-20 px-6 max-w-7xl mx-auto overflow-hidden">
         <div className="mb-1 pt-6">
-            <Link href="/#FeaturedClients" className="inline-block">
+            <Link href="/Portfolio" className="inline-block">
                 <button
-                    style={{ color: BRAND_RED }}
+                    style={{ color: accentColor }}
                     className="flex items-center gap-2 font-bold text-sm mb-2 uppercase tracking-tight"
                 >
                     <ArrowLeft size={16} strokeWidth={3} /> Back to Projects
@@ -32,11 +31,11 @@ export const HeroChallenges = (
             </Link>
 
             <div
-                style={{ backgroundColor: BRAND_RED }}
+                style={{ backgroundColor: accentColor }}
                 className="w-16 h-1 rounded-full"
             />
         </div>
-        .{/* Header Section: Logo + Title (Centered) */}
+        {/* Header Section: Logo + Title (Centered) */}
         <div className="flex flex-row items-center justify-center text-center gap-6 mb-8">
             <div className="relative w-20 h-20 md:w-24 md:h-24 bg-white rounded-full shadow-sm flex items-center justify-center overflow-hidden border border-gray-50">
                 <Image
@@ -46,7 +45,7 @@ export const HeroChallenges = (
                     className="object-contain rounded-full"
                 />
             </div>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight text-[#7C3AED]">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight" style={{ color: accentColor }}>
                 {companyName}
             </h1>
         </div>
@@ -72,7 +71,7 @@ export const HeroChallenges = (
                 {challenges.map((text, i) => (
                     <div key={i} className="flex items-center gap-4">
                         <div
-                            style={{ backgroundColor: BRAND_RED }}
+                            style={{ backgroundColor: accentColor }}
                             className="w-2 h-2 rounded-full mt-[10px] shrink-0"
                         />
                         <p className="text-gray-600 text-sm md:text-[15px] leading-relaxed font-medium">
