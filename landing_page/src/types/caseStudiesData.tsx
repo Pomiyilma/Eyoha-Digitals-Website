@@ -1,13 +1,8 @@
 import React from "react";
 import { StaticImageData } from "next/image";
 import {
-    // Layout,
     Palette,
-    // Megaphone,
-    // Search,
     Users,
-    // MousePointer2,
-    // Briefcase,
     Database,
     CodeXml,
     TrendingUp,
@@ -20,6 +15,8 @@ import {
     Share2,
     Smartphone,
     Type,
+    Megaphone,
+    Target,
 } from "lucide-react";
 // images import //
 import skillbridgeLogo from "../assets/images/skillbridgenewlogo.png";
@@ -34,7 +31,7 @@ import linkedinaccount from "../assets/images/linkedinaccount.png";
 
 import homepageskill from "../assets/images/homepageskill.png";
 import telegramskill from "../assets/images/telegramskill.png";
-import paidaddkill from "../assets/images/paidaddskill.png";
+import paidaddskill from "../assets/images/paidaddskill.png";
 import amin2 from "../assets/images/amintiktok2.png";
 import amin1 from "../assets/images/amintiktok1.png";
 import galaxyhome from "../assets/images/galaxyhome.png";
@@ -83,92 +80,182 @@ export interface CaseStudyProps {
         desc: string;
         img: string | StaticImageData;
     }[];
-    // tools: string[];
 }
 
 export const PAGE_DATA: Record<string, CaseStudyProps> = {
-    skillbridge: {
-        companyName: "Skillbridge Institute of Technology",
-        logo: skillbridgeLogo,
-        description: `Skillbridge Institute of Technology is an education-focused institution dedicated to providing practical, skill-based learning in technology and related fields. The institute aims to prepare students with industry-relevant knowledge and hands-on experience for real-world careers.\n\nEyoha Digitals partnered with Skillbridge Institute of Technology to strengthen its digital presence, build a consistent academic brand, and improve student engagement through strategic branding and educational content marketing.`,
+    amenFurniture: {
+        companyName: "Amen Furniture",
+        logo: safelogo,
+        description: `Amen Furniture is a modern furniture brand dedicated to showcasing stylish and high-quality products. Eyoha Digitals partnered with Amen Furniture to strengthen its digital presence and showcase products effectively.`,
         challenges: [
-            "Limited brand visibility on academic platforms",
-            "Difficulty communicating programs and courses clearly to prospective students",
-            "Inconsistent visual branding and messaging",
-            "Lack of a clear content strategy aligned with enrolment goals",
-            "Low audience engagement on social media",
-            "Limited differentiation from other technology and training institutes",
+            "Limited digital presence, making it difficult to reach modern furniture buyers online.",
+            "Inconsistent brand visuals that weakened recognition and perceived professionalism.",
+            "Low audience engagement across social platforms despite strong product quality.",
+            "Lack of structured content strategy to showcase products effectively.",
+            "Difficulty communicating brand value in a competitive furniture market.",
         ],
         services: [
             {
-                title: "Website design and development",
-                description:
-                    "Planned structured content to increase reach, awareness, and student interest",
-                icon: <CodeXml />,
-                date: " Sep 2025 - Present",
+                title: "Social Media Management",
+                description: "Established a consistent posting system to improve visibility and maintain an active brand presence.",
+                icon: <Share2 />,
+                date: "Ongoing",
             },
             {
-                title: "Visual Content Design",
-                description: "Designing high-quality social media assets.",
-                icon: <TrendingUp />,
-                date: "Sep 2025 - Present",
+                title: "Content Strategy Development",
+                description: "Designed a strategic content plan focused on product storytelling and lifestyle appeal.",
+                icon: <Layers />,
+                date: "Ongoing",
             },
             {
-                title: "Brand building logo and branding",
-                description:
-                    "Improved brand consistency across all digital platforms",
+                title: "Brand Visual Alignment",
+                description: "Standardized colors, typography, and creative direction to strengthen brand identity.",
                 icon: <Palette />,
-                date: "Sep 2025 - Present",
+                date: "Ongoing",
             },
             {
-                title: "Product Focused Content Development",
-                description: "Showcased products clearly and professionally.",
-                icon: <Database />,
-                date: "Sep 2025 - Present",
+                title: "Creative Content Production",
+                description: "Produced high-quality visuals and videos to highlight craftsmanship and functionality.",
+                icon: <Figma />,
+                date: "Ongoing",
             },
             {
-                title: "Engagement Optimization Strategy",
-                description:
-                    "Boosted student interaction, inquiries, and enrollment interest",
+                title: "Audience Engagement Optimization",
+                description: "Implemented engagement-driven formats to encourage interaction and build community.",
                 icon: <Users />,
-                date: "Sep 2025 - Present",
+                date: "Ongoing",
             },
         ],
         metrics: [
-            { label: "Increased social media engagement rate", value: "300%" },
-            {
-                label: "Growth in follower base within a short period",
-                value: "4.8%",
-            },
-            {
-                label: "Improved customer inquiries through social platforms",
-                value: "85%",
-            },
-            {
-                label: "Stronger brand recognition within the interior & furniture market",
-                value: "250%",
-            },
+            { label: "Brand Recognition", value: "Up" },
+            { label: "Digital Presence", value: "Stronger" },
+            { label: "Audience Engagement", value: "Increased" },
+            { label: "Product Visibility", value: "Enhanced" },
         ],
         testimonial: {
-            quote: "Eyoha Digitals helped us transform our online presence with clear branding and engaging content. Their work significantly improved how our products are presented and how customers interact with our brand.”",
+            quote: "Eyoha Digitals transformed our online presence — our brand now truly reflects the quality and style of our furniture.",
+            author: "Amen Furniture",
+            role: "CEO",
+            avatar: testimonial,
+        },
+        finalOutcome: "Amen Furniture now has a strong, consistent digital presence that effectively showcases their furniture and connects with modern buyers.",
+        beforeImage: sofibefore,
+        afterImage: sofiafter,
+        transformationPoints: {
+            before: [
+                "Limited digital footprint",
+                "Inconsistent brand visuals",
+                "Low audience engagement",
+            ],
+            after: [
+                "Strong, active digital presence",
+                "Consistent brand identity and visuals",
+                "Higher audience interaction",
+                "Effective product storytelling",
+            ],
+        },
+        contentSamples: [
+            {
+                title: "Social Media Post",
+                desc: "Showcasing furniture products with consistent brand visuals.",
+                img: sofiafter,
+            },
+            {
+                title: "Product Highlight",
+                desc: "Highlighting craftsmanship and functionality through creative content.",
+                img: sofibefore,
+            },
+        ],
+        tools: [
+            Figma,
+            Share2,
+            Smartphone,
+            Type,
+            Palette,
+        ],
+    },
+
+    skillbridge: {
+        companyName: "Skillbridge Institute of Technology",
+        logo: skillbridgeLogo,
+        description: `Skillbridge Institute of Technology is a practical, skill-focused education center preparing students for technology-driven careers. Eyoha Digitals partnered with the institute to build a consistent academic brand and create strategic educational content that engages students and strengthens credibility in the tech education space.`,
+        challenges: [
+            "Limited visibility and brand recognition in a competitive tech education market.",
+            "Difficulty communicating the real-world value of courses to prospective students.",
+            "Inconsistent messaging across platforms affecting student trust.",
+            "Lack of structured content to highlight skills-based learning outcomes.",
+            "Need for strategic content to attract motivated, career-focused learners.",
+        ],
+        services: [
+            {
+                title: "Full Brand Identity Development",
+                description: "Designed a complete visual and strategic identity to position the brand confidently in the market.",
+                icon: <Palette />,
+                date: "Ongoing",
+            },
+            {
+                title: "Brand Strategy Development",
+                description: "Defined a clear academic positioning to enhance credibility and attract students.",
+                icon: <Layers />,
+                date: "Ongoing",
+            },
+            {
+                title: "Content Strategy Development",
+                description: "Created a structured content framework emphasizing industry-relevant skills and outcomes.",
+                icon: <TrendingUp />,
+                date: "Ongoing",
+            },
+            {
+                title: "Educational Content Planning",
+                description: "Selected high-impact topics to showcase programs and student success stories.",
+                icon: <Database />,
+                date: "Ongoing",
+            },
+            {
+                title: "Creative Content Writing",
+                description: "Produced engaging, informative, and persuasive content to drive student interest.",
+                icon: <Type />,
+                date: "Ongoing",
+            },
+            {
+                title: "Social Media Account Setup",
+                description: "Launched fully optimized professional profiles to support visibility and trust from day one.",
+                icon: <Globe />,
+                date: "Ongoing",
+            },
+            {
+                title: "Social Media Management",
+                description: "Managed day-to-day platform activities to ensure consistency, responsiveness, and steady growth.",
+                icon: <Share2 />,
+                date: "Ongoing",
+            },
+        ],
+        metrics: [
+            { label: "Student Interest", value: "Up" },
+            { label: "Brand Credibility", value: "Stronger" },
+            { label: "Program Visibility", value: "Enhanced" },
+            { label: "Consistent Messaging", value: "Yes" },
+        ],
+        testimonial: {
+            quote: "Eyoha Digitals helped us showcase our programs professionally, attracting motivated students consistently.",
             author: "Skillbridge Institute of Technology",
             role: "CEO",
             avatar: testimonial,
         },
-        finalOutcome: "Skillbridge has gained a stronger brand presence.",
+        finalOutcome: "Skillbridge Institute of Technology now has a strong, consistent academic brand that attracts motivated students and showcases its programs professionally.",
         beforeImage: skillbefore,
         afterImage: skillafter,
         transformationPoints: {
             before: [
-                "Inconsistent post designs and color usage",
-                "Product images without clear messaging",
-                "Inconsistent post designs and color usage",
+                "Limited brand visibility",
+                "Inconsistent messaging",
+                "Low student trust",
             ],
             after: [
-                "Consistent brand colors, typography, and layout",
-                "High-quality visuals with clear product highlights",
-                "Improved storytelling that connects products to lifestyle needs",
-                "Engaging captions with strong call to actions",
+                "Strong brand recognition",
+                "Consistent academic messaging",
+                "Increased student interest",
+                "Enhanced credibility",
             ],
         },
         contentSamples: [
@@ -185,7 +272,7 @@ export const PAGE_DATA: Record<string, CaseStudyProps> = {
             {
                 title: "Paid Ad",
                 desc: "Optimizing ad visuals and copy for a seamless transition from click to community.",
-                img: paidaddkill,
+                img: paidaddskill,
             },
         ],
         tools: [
@@ -200,105 +287,100 @@ export const PAGE_DATA: Record<string, CaseStudyProps> = {
         ],
     },
 
-    galaxyFurniture: {
-        companyName: "Galaxy Furniture",
-        logo: galaxylogo,
-        description: `Galaxy Furniture is a modern interior and furniture brand focused on delivering stylish, durable, and functional furniture solutions for residential and commercial spaces. Eyoha Digitals partnered with Galaxy Furniture to enhance their digital presence, strengthen brand consistency, and improve customer engagement through strategic content and marketing solutions.`,
+    safeFurniture: {
+        companyName: "Safe Furniture",
+        logo: safelogo,
+        description: `Safe Furniture is a contemporary furniture brand committed to delivering stylish, durable, and functional pieces for modern living spaces. Eyoha Digitals partnered with Safe Furniture to build the brand from the ground up and manage its ongoing digital growth — establishing a strong identity while driving visibility, engagement, and brand recognition.`,
         challenges: [
-            "Limited brand visibility on social media platforms",
-            "Difficulty converting online viewers into potential customers",
-            "Inconsistent visual branding and messaging",
-            "Lack of a clear content strategy aligned with business goals",
-            "Low audience engagement and interaction",
-            "Limited differentiation from competitors in the furniture market",
+            "No existing brand identity, resulting in unclear market positioning.",
+            "Zero digital presence at launch, limiting early customer reach.",
+            "Difficulty building credibility as a new entrant in a competitive market.",
+            "Lack of strategic direction for consistent content and communication.",
+            "Need for professional creative assets to showcase products effectively.",
+            "Low initial audience awareness and engagement potential.",
         ],
         services: [
             {
-                title: "Website design and development",
-                description:
-                    "Planned structured content to increase reach, awareness, and student interest",
-                icon: <CodeXml />,
-                date: " Sep 2025 - Present",
-            },
-            {
-                title: "Visual Content Design",
-                description: "Designing high-quality social media assets.",
-                icon: <TrendingUp />,
-                date: "Sep 2025 - Present",
-            },
-            {
-                title: "Brand building logo and branding",
-                description:
-                    "Improved brand consistency across all digital platforms",
+                title: "Full Brand Identity Development",
+                description: "Designed a complete visual and strategic identity to position the brand confidently in the market.",
                 icon: <Palette />,
-                date: "Sep 2025 - Present",
+                date: "Ongoing",
             },
             {
-                title: "Product Focused Content Development",
-                description: "Showcased products clearly and professionally.",
-                icon: <Database />,
-                date: "Sep 2025 - Present",
+                title: "Social Media Account Setup",
+                description: "Launched fully optimized professional profiles to support visibility and trust from day one.",
+                icon: <Globe />,
+                date: "Ongoing",
             },
             {
-                title: "Engagement Optimization Strategy",
-                description:
-                    "Boosted student interaction, inquiries, and enrollment interest",
+                title: "Social Media Management",
+                description: "Managed day-to-day platform activities to ensure consistency, responsiveness, and steady growth.",
+                icon: <Share2 />,
+                date: "Ongoing",
+            },
+            {
+                title: "Content Strategy Development",
+                description: "Built a structured content roadmap aligned with brand goals and audience interests.",
+                icon: <Layers />,
+                date: "Ongoing",
+            },
+            {
+                title: "Creative Content Production",
+                description: "Produced high-quality visuals and videos that highlight product quality and lifestyle appeal.",
+                icon: <Figma />,
+                date: "Ongoing",
+            },
+            {
+                title: "Audience Engagement Optimization",
+                description: "Implemented engagement-focused approaches to foster interaction and build a loyal community.",
                 icon: <Users />,
-                date: "Sep 2025 - Present",
+                date: "Ongoing",
+            },
+            {
+                title: "Digital Foundation Setup",
+                description: "Built a scalable brand infrastructure ready to support future marketing initiatives.",
+                icon: <Layout />,
+                date: "Ongoing",
             },
         ],
         metrics: [
-            { label: "Increased social media engagement rate", value: "300%" },
-            {
-                label: "Growth in follower base within a short period",
-                value: "4.8%",
-            },
-            {
-                label: "Improved customer inquiries through social platforms",
-                value: "85%",
-            },
-            {
-                label: "Stronger brand recognition within the interior & furniture market",
-                value: "250%",
-            },
+            { label: "Brand Identity", value: "Complete" },
+            { label: "Digital Presence", value: "Strong" },
+            { label: "Brand Recognition", value: "Growing" },
+            { label: "Community Engagement", value: "Up" },
         ],
         testimonial: {
-            quote: "Eyoha Digitals helped us transform our online presence with clear branding and engaging content. Their work significantly improved how our products are presented and how customers interact with our brand.”",
-            author: "Galaxy Furniture",
+            quote: "We love our new logo, colors, and overall branding — it exceeded our expectations, boosted our confidence, and built a strong digital presence for our brand.",
+            author: "Safe Furniture",
             role: "CEO",
             avatar: testimonial,
         },
-        finalOutcome: "Stronger presence and increased inquiries.",
-        beforeImage: beforegalaxy,
-        afterImage: aftergalaxy,
+        finalOutcome: "Safe Furniture built a premium digital presence that matches their physical product quality.",
+        beforeImage: sofibefore,
+        afterImage: sofiafter,
         transformationPoints: {
             before: [
-                "Inconsistent post designs and color usage",
-                "Product images without clear messaging",
-                "Inconsistent post designs and color usage",
+                "No brand identity",
+                "No digital presence",
+                "Low credibility",
             ],
             after: [
-                "Consistent brand colors, typography, and layout",
-                "High-quality visuals with clear product highlights",
-                "Improved storytelling that connects products to lifestyle needs",
-                "Engaging captions with strong call to actions",
+                "Complete brand identity",
+                "Strong digital presence",
+                "High brand recognition",
+                "Loyal community",
             ],
         },
         contentSamples: [
             {
-                title: "Website Homepage",
-                desc: "Creating a cohesive visual language through unified layouts and colors.",
-                img: galaxyhome,
+                title: "Brand Identity",
+                desc: "Complete visual and strategic identity for Safe Furniture.",
+                img: safelogo,
             },
             {
-                title: "Marketing Brochure",
-                desc: "Streamlining our content design for a cleaner, more enjoyable reading experience.",
-                img: galaxybrochure,
-            },
-            {
-                title: "Mobile App Interface",
-                desc: "Streamlining our content design for a cleaner, more enjoyable reading experience.",
-                img: galaxymobile,
+                title: "Social Media Post",
+                desc: "High-quality visuals highlighting product quality and lifestyle appeal.",
+                img: sofiafter,
             },
         ],
         tools: [
@@ -310,63 +392,153 @@ export const PAGE_DATA: Record<string, CaseStudyProps> = {
             Share2,
             Smartphone,
             Type,
+        ],
+    },
+
+    makiInterior: {
+        companyName: "Maki Interior Design",
+        logo: makilogo,
+        description: `Maki Interior Design is a professional design firm offering customized interior solutions alongside a dedicated interior design school. Eyoha Digitals partnered with the brand to drive qualified traffic through targeted paid advertising — attracting both high-intent clients and prospective students.`,
+        challenges: [
+            "Limited inbound inquiries for interior design services.",
+            "Low awareness of the interior design school among potential students.",
+            "Need for highly targeted campaigns to reach two distinct audiences.",
+            "Difficulty converting online attention into measurable leads.",
+            "Underutilized digital channels for scalable growth.",
+        ],
+        services: [
+            {
+                title: "Paid Advertising Strategy",
+                description: "Developed a performance-focused ad strategy tailored to generate qualified leads.",
+                icon: <Megaphone />,
+                date: "Ongoing",
+            },
+            {
+                title: "Facebook & Instagram Advertising",
+                description: "Executed targeted campaigns designed to attract both interior design clients and school applicants.",
+                icon: <Share2 />,
+                date: "Ongoing",
+            },
+            {
+                title: "Audience Targeting & Segmentation",
+                description: "Identified and reached high-intent demographics to maximize ad efficiency.",
+                icon: <Target />,
+                date: "Ongoing",
+            },
+            {
+                title: "Campaign Optimization",
+                description: "Continuously refined creatives and targeting to improve results and reduce acquisition costs.",
+                icon: <TrendingUp />,
+                date: "Ongoing",
+            },
+            {
+                title: "Traffic & Lead Generation",
+                description: "Successfully increased inquiry volume and student interest through data-driven advertising.",
+                icon: <Users />,
+                date: "Ongoing",
+            },
+        ],
+        metrics: [
+            { label: "Paid Reach", value: "271K" },
+            { label: "Lead Quality", value: "High" },
+            { label: "Client Inquiries", value: "Up" },
+            { label: "Student Applications", value: "Increased" },
+        ],
+        testimonial: {
+            quote: "The paid campaigns were a game-changer — we saw measurable growth in both client inquiries and student applications.",
+            author: "Maki Interior Design",
+            role: "CEO",
+            avatar: testimonial,
+        },
+        finalOutcome: "Maki Interior reached new levels of brand awareness and high-intent lead generation.",
+        beforeImage: makibefore,
+        afterImage: makiafter,
+        transformationPoints: {
+            before: [
+                "Limited inbound inquiries",
+                "Low school awareness",
+                "Underutilized digital channels",
+            ],
+            after: [
+                "Increased client inquiries",
+                "Higher student applications",
+                "Effective targeted campaigns",
+                "Measurable lead growth",
+            ],
+        },
+        contentSamples: [
+            {
+                title: "Paid Ad",
+                desc: "Optimizing ad visuals and copy for a seamless transition from click to community.",
+                img: paidaddskill,
+            },
+        ],
+        tools: [
+            Figma,
+            Globe,
+            Component,
+            Layers,
+            Layout,
+            Share2,
+            Smartphone,
+            Type,
+            Megaphone,
+            Target,
         ],
     },
 
     aminHospital: {
         companyName: "Amin General Hospital",
         logo: aminlogo,
-        description: `Amin General Hospital is a trusted healthcare provider dedicated to delivering quality medical services with a patient-centered approach. The hospital offers comprehensive care through modern facilities, skilled professionals, and a commitment to community wellbeing.
-\n\n
-Eyoha Digitals partnered with Amin General Hospital to strengthen its digital presence, improve brand consistency, and enhance patient engagement through strategic content and digital marketing solutions.`,
+        description: `Amin General Hospital is a trusted healthcare provider dedicated to delivering quality medical services through modern facilities and a patient-centered approach. Eyoha Digitals partnered with the hospital to strengthen its communication foundation by developing strategic, educational, and brand-aligned content that enhances credibility and patient awareness.`,
         challenges: [
-            "Limited brand visibility on academic platforms",
-            "Difficulty communicating programs and courses clearly to prospective students",
-            "Inconsistent visual branding and messaging",
-            "Lack of a clear content strategy aligned with enrolment goals",
-            "Low audience engagement on social media",
-            "Limited differentiation from other technology and training institutes",
+            "Lack of structured content to clearly communicate medical services.",
+            "Difficulty educating patients in a simple, trustworthy, and professional tone.",
+            "Inconsistent messaging that affected brand credibility.",
+            "Need for strategic direction before executing marketing activities.",
+            "Limited content planning to support long-term awareness goals.",
         ],
         services: [
             {
-                title: "Content Development",
-                description:
-                    "Developed a clear content plan aligned with healthcare communication goals",
-                icon: <CodeXml />,
-                date: "July 2025 -November 2025",
+                title: "Content Strategy Development",
+                description: "Built a structured content roadmap aligned with the hospital’s communication goals and patient needs.",
+                icon: <Layers />,
+                date: "Ongoing",
             },
             {
-                title: "Engagement Optimization Strategy",
-                description: "Boosted interactions and customer inquiries.",
-                icon: <Users />,
-                date: "July 2025 -November 2025",
-            },
-            {
-                title: "Service-Focused Content Development",
-                description:
-                    "Clearly showcased hospital departments, services, and facilities",
+                title: "Healthcare Content Planning",
+                description: "Identified key topics and themes to educate the public while reinforcing professional authority.",
                 icon: <Database />,
-                date: "July 2025 -November 2025",
+                date: "Ongoing",
+            },
+            {
+                title: "Creative Content Writing",
+                description: "Produced clear, compliant, and patient-friendly copy designed to inform and build trust.",
+                icon: <Type />,
+                date: "Ongoing",
+            },
+            {
+                title: "Brand Messaging Alignment",
+                description: "Refined tone and messaging to ensure consistency across all communication materials.",
+                icon: <Palette />,
+                date: "Ongoing",
+            },
+            {
+                title: "Digital Presence Strengthening",
+                description: "Positioned the hospital as a reliable and accessible healthcare provider online.",
+                icon: <Globe />,
+                date: "Ongoing",
             },
         ],
         metrics: [
-            { label: "Increased social media engagement rate", value: "300%" },
-            {
-                label: "Growth in follower base within a short period",
-                value: "4.8%",
-            },
-            {
-                label: "Improved customer inquiries through social platforms",
-                value: "85%",
-            },
-            {
-                label: "Stronger brand recognition within the interior & furniture market",
-                value: "250%",
-            },
+            { label: "Patient Communication", value: "Improved" },
+            { label: "Brand Credibility", value: "Stronger" },
+            { label: "Content Consistency", value: "Yes" },
+            { label: "Public Awareness", value: "Up" },
         ],
         testimonial: {
-            quote: "Eyoha Digitals helped us transform our online presence with clear branding and engaging content. Their work significantly improved how our products are presented and how customers interact with our brand.”",
-            author: "Amin Hospital",
+            quote: "Their content strategy helped us connect better with our patients and present our services clearly online.",
+            author: "Amin General Hospital",
             role: "CEO",
             avatar: testimonial,
         },
@@ -375,25 +547,25 @@ Eyoha Digitals partnered with Amin General Hospital to strengthen its digital pr
         afterImage: aminafter,
         transformationPoints: {
             before: [
-                "Inconsistent post designs and color usage",
-                "Product images without clear messaging",
-                "Inconsistent post designs and color usage",
+                "Lack of structured content",
+                "Inconsistent messaging",
+                "Low brand credibility",
             ],
             after: [
-                "Consistent brand colors, typography, and layout",
-                "High-quality visuals with clear product highlights",
-                "Improved storytelling that connects products to lifestyle needs",
-                "Engaging captions with strong call to actions",
+                "Clear content strategy",
+                "Consistent brand messaging",
+                "Stronger patient trust",
+                "Enhanced digital presence",
             ],
         },
         contentSamples: [
             {
-                title: "TikTok video sample",
+                title: "TikTok Video",
                 desc: "Creating a rhythmic visual flow that captures attention and builds brand recognition.",
                 img: amin2,
             },
             {
-                title: "TikTok video sample",
+                title: "TikTok Video",
                 desc: "Creating a rhythmic visual flow that captures attention and builds brand recognition.",
                 img: amin1,
             },
@@ -413,86 +585,72 @@ Eyoha Digitals partnered with Amin General Hospital to strengthen its digital pr
     beltechSolutions: {
         companyName: "Beltech Solutions",
         logo: beltechlogo,
-        description: `Beltech is an education-focused institution committed to delivering practical, skill-based learning in technology and related fields. The institution focuses on equipping students with industry-relevant knowledge and hands-on experience to prepare them for real-world careers.\n\n
-Eyoha Digitals partnered with Beltech to enhance its digital presence, establish a strong and consistent academic brand, and increase student engagement through strategic branding and targeted educational content marketing.`,
+        description: `Beltech Solutions is a professional digital business solutions company specializing in ERP systems, Odoo implementations, website development, and related business technologies. Eyoha Digitals partnered with Beltech Solutions to craft a strong brand identity from scratch and establish a professional presence on LinkedIn and Telegram through strategic content and visual storytelling.`,
         challenges: [
-            "Limited brand visibility on academic platforms",
-            "Difficulty communicating programs and courses clearly to prospective students",
-            "Inconsistent visual branding and messaging",
-            "Lack of a clear content strategy aligned with enrolment goals",
-            "Low audience engagement on social media",
-            "Limited differentiation from other technology and training institutes",
+            "No established brand identity, limiting recognition in the B2B tech market.",
+            "Lack of professional digital channels to communicate expertise and services.",
+            "Difficulty conveying complex ERP and tech solutions in a clear, engaging way.",
+            "Inconsistent messaging across platforms affecting credibility.",
+            "Need for strategic content to attract business clients and partners.",
         ],
         services: [
             {
-                title: "Website design and development",
-                description:
-                    "Planned structured content to increase reach, awareness, and student interest",
-                icon: <CodeXml />,
-                date: " Sep 2025 - Present",
-            },
-            {
-                title: "Visual Content Design",
-                description: "Designing high-quality social media assets.",
-                icon: <TrendingUp />,
-                date: "Sep 2025 - Present",
-            },
-            {
-                title: "Brand building logo and branding",
-                description:
-                    "Improved brand consistency across all digital platforms",
+                title: "Brand Identity Creation",
+                description: "Developed a full visual and messaging system to establish professionalism and trust.",
                 icon: <Palette />,
-                date: "Sep 2025 - Present",
+                date: "Ongoing",
             },
             {
-                title: "Product Focused Content Development",
-                description: "Showcased products clearly and professionally.",
-                icon: <Database />,
-                date: "Sep 2025 - Present",
+                title: "Content Strategy Development",
+                description: "Built a structured content plan tailored for B2B audiences on LinkedIn and Telegram.",
+                icon: <Layers />,
+                date: "Ongoing",
             },
             {
-                title: "Engagement Optimization Strategy",
-                description:
-                    "Boosted student interaction, inquiries, and enrollment interest",
-                icon: <Users />,
-                date: "Sep 2025 - Present",
+                title: "Professional Social Media Setup",
+                description: "Launched and optimized LinkedIn and Telegram accounts to enhance discoverability.",
+                icon: <Globe />,
+                date: "Ongoing",
+            },
+            {
+                title: "Copywriting & Visual Content Production",
+                description: "Created compelling copy and supporting visuals to communicate services effectively.",
+                icon: <Type />,
+                date: "Ongoing",
+            },
+            {
+                title: "Messaging Alignment",
+                description: "Ensured consistent tone and presentation to strengthen authority in the business solutions market.",
+                icon: <Share2 />,
+                date: "Ongoing",
             },
         ],
         metrics: [
-            { label: "Increased social media engagement rate", value: "300%" },
-            {
-                label: "Growth in follower base within a short period",
-                value: "4.8%",
-            },
-            {
-                label: "Improved customer inquiries through social platforms",
-                value: "85%",
-            },
-            {
-                label: "Stronger brand recognition within the interior & furniture market",
-                value: "250%",
-            },
+            { label: "Brand Identity", value: "Complete" },
+            { label: "LinkedIn Presence", value: "Professional" },
+            { label: "B2B Credibility", value: "Stronger" },
+            { label: "Messaging Consistency", value: "Yes" },
         ],
         testimonial: {
-            quote: "Eyoha Digitals helped us transform our online presence with clear branding and engaging content. Their work significantly improved how our products are presented and how customers interact with our brand.”",
-            author: "BelTech Solutions",
+            quote: "We now have a clear, credible digital identity that effectively communicates our solutions to business clients.",
+            author: "Beltech Solutions",
             role: "CEO",
             avatar: testimonial,
         },
-        finalOutcome: "Increased enrollment queries.",
+        finalOutcome: "Increased enrollment queries and a strong B2B brand presence.",
         beforeImage: beforegalaxy,
         afterImage: linkedinaccount,
         transformationPoints: {
             before: [
-                "Inconsistent post designs and color usage",
-                "Product images without clear messaging",
-                "Inconsistent post designs and color usage",
+                "No brand identity",
+                "No professional channels",
+                "Inconsistent messaging",
             ],
             after: [
-                "Consistent brand colors, typography, and layout",
-                "High-quality visuals with clear product highlights",
-                "Improved storytelling that connects products to lifestyle needs",
-                "Engaging captions with strong call to actions",
+                "Complete brand identity",
+                "Professional LinkedIn & Telegram presence",
+                "Clear service communication",
+                "Strong B2B credibility",
             ],
         },
         contentSamples: [
@@ -507,193 +665,11 @@ Eyoha Digitals partnered with Beltech to enhance its digital presence, establish
                 img: telegramaccount,
             },
             {
-                title: "Linkedin Account",
-                desc: "Streamlining our content design for a cleaner, more enjoyable reading experience.",
+                title: "LinkedIn Account",
+                desc: "Professional presence for B2B audience engagement.",
                 img: linkedinaccount,
             },
         ],
-        tools: [
-            Figma,
-            Globe,
-            Component,
-            Layers,
-            Layout,
-            Share2,
-            Smartphone,
-            Type,
-        ],
-    },
-
-    safeFurniture: {
-        companyName: "Safe Furniture",
-        logo: safelogo,
-        description: `Safe Furniture is a modern interior and furniture brand focused on delivering stylish, durable, and functional furniture solutions for residential and commercial spaces. Eyoha Digitals partnered with Galaxy Furniture to enhance their digital presence, strengthen brand consistency, and improve customer engagement through strategic content and marketing solutions.`,
-        challenges: [
-            "Limited brand visibility on social media platforms",
-            "Difficulty converting online viewers into potential customers",
-            "Inconsistent visual branding and messaging",
-            "Lack of a clear content strategy aligned with business goals",
-            "Low audience engagement and interaction",
-            "Limited differentiation from competitors in the furniture market",
-        ],
-        services: [
-            {
-                title: "Website design and development",
-                description:
-                    "Planned structured content to increase reach, awareness, and student interest",
-                icon: <CodeXml />,
-                date: " Sep 2025 - Present",
-            },
-            {
-                title: "Visual Content Design",
-                description: "Designing high-quality social media assets.",
-                icon: <TrendingUp />,
-                date: "Sep 2025 - Present",
-            },
-            {
-                title: "Brand building logo and branding",
-                description:
-                    "Improved brand consistency across all digital platforms",
-                icon: <Palette />,
-                date: "Sep 2025 - Present",
-            },
-            {
-                title: "Product Focused Content Development",
-                description: "Showcased products clearly and professionally.",
-                icon: <Database />,
-                date: "Sep 2025 - Present",
-            },
-            {
-                title: "Engagement Optimization Strategy",
-                description:
-                    "Boosted student interaction, inquiries, and enrollment interest",
-                icon: <Users />,
-                date: "Sep 2025 - Present",
-            },
-        ],
-        metrics: [
-            { label: "Social engagement", value: "300%" },
-            { label: "Reach increase", value: "85%" },
-            { label: "Market awareness", value: "250%" },
-            { label: "Growth", value: "4.8%" },
-        ],
-        testimonial: {
-            quote: "Eyoha Digitals helped us transform our online presence with clear branding and engaging content. Their work significantly improved how our products are presented and how customers interact with our brand.”",
-            author: "Safe Furniture",
-            role: "CEO",
-            avatar: testimonial,
-        },
-        finalOutcome:
-            "Safe Furniture built a premium digital presence that matches their physical product quality.",
-        beforeImage: sofibefore,
-        afterImage: sofiafter,
-        transformationPoints: {
-            before: [
-                "Inconsistent post designs and color usage",
-                "Product images without clear messaging",
-                "Inconsistent post designs and color usage",
-            ],
-            after: [
-                "Consistent brand colors, typography, and layout",
-                "High-quality visuals with clear product highlights",
-                "Improved storytelling that connects products to lifestyle needs",
-                "Engaging captions with strong call to actions",
-            ],
-        },
-        contentSamples: [
-            {
-                title: "Website Homepage",
-                desc: "Creating a cohesive visual language through unified layouts and colors.",
-                img: websitehomepage,
-            },
-            {
-                title: "Telegram Account",
-                desc: "Streamlining our content design for a cleaner, more enjoyable reading experience.",
-                img: telegramaccount,
-            },
-            {
-                title: "Linkedin Account",
-                desc: "Streamlining our content design for a cleaner, more enjoyable reading experience.",
-                img: linkedinaccount,
-            },
-        ],
-        // Added tools for Safe Furniture
-        tools: [
-            Figma,
-            Globe,
-            Component,
-            Layers,
-            Layout,
-            Share2,
-            Smartphone,
-            Type,
-        ],
-    },
-
-    makiInterior: {
-        companyName: "Maki Interior Design",
-        logo: makilogo,
-        description:
-            "Maki Furniture is a modern interior and furniture brand focused on delivering stylish, durable, and functional furniture solutions for residential and commercial spaces. Eyoha Digitals partnered with Galaxy Furniture to enhance their digital presence, strengthen brand consistency, and improve customer engagement through strategic content and marketing solutions.",
-        challenges: [
-            "Limited brand visibility on social media platforms",
-            "Difficulty converting online viewers into potential customers",
-            "Inconsistent visual branding and messaging",
-            "Lack of a clear content strategy aligned with business goals",
-            "Low audience engagement and interaction",
-            "Limited differentiation from competitors in the furniture market",
-        ],
-        services: [
-            {
-                title: "Paid Ads",
-                description: "Showcased products clearly and professionally.",
-                icon: <Database />,
-                date: "May 2024 - Jul 2024",
-            },
-            {
-                title: "Engagement Optimization Strategy",
-                description: "Boosted interactions and customer inquiries.",
-                icon: <Users />,
-                date: "May 2024 - Jul 2024",
-            },
-        ],
-        metrics: [
-            { label: "Paid Reach", value: "300%" },
-            { label: "Lead quality", value: "85%" },
-            { label: "Brand trust", value: "250%" },
-            { label: "Inquiry boost", value: "4.8%" },
-        ],
-        testimonial: {
-            quote: "Eyoha Digitals helped us transform our online presence with clear branding and engaging content. Their work significantly improved how our products are presented and how customers interact with our brand.”",
-            author: "Maki Interior",
-            role: "CEO",
-            avatar: testimonial,
-        },
-        finalOutcome:
-            "Maki Interior reached new levels of brand awareness and high-intent lead generation.",
-        beforeImage: makibefore,
-        afterImage: makiafter,
-        transformationPoints: {
-            before: [
-                "Inconsistent post designs and color usage",
-                "Product images without clear messaging",
-                "Inconsistent post designs and color usage",
-            ],
-            after: [
-                "Consistent brand colors, typography, and layout",
-                "High-quality visuals with clear product highlights",
-                "Improved storytelling that connects products to lifestyle needs",
-                "Engaging captions with strong call to actions",
-            ],
-        },
-        contentSamples: [
-            {
-                title: "Paid Ad",
-                desc: "Optimizing ad visuals and copy for a seamless transition from click to community.",
-                img: paidaddkill,
-            },
-        ],
-        // Added tools for Maki Interior (including Marketing/Ads tools)
         tools: [
             Figma,
             Globe,
