@@ -4,7 +4,6 @@ import {
     Palette,
     Users,
     Database,
-    CodeXml,
     TrendingUp,
     LucideIcon,
     Figma,
@@ -21,7 +20,6 @@ import {
 // images import //
 import skillbridgeLogo from "../assets/images/skillbridgenewlogo.png";
 import aminlogo from "../assets/images/aminlogonew.png";
-import galaxylogo from "../assets/images/galaxyfurniture.png";
 import makilogo from "../assets/images/maki.png";
 import safelogo from "../assets/images/sofiFerniture.png";
 import beltechlogo from "../assets/images/beltechlogo.png";
@@ -34,11 +32,7 @@ import telegramskill from "../assets/images/telegramskill.png";
 import paidaddskill from "../assets/images/paidaddskill.png";
 import amin2 from "../assets/images/amintiktok2.png";
 import amin1 from "../assets/images/amintiktok1.png";
-import galaxyhome from "../assets/images/galaxyhome.png";
-import galaxybrochure from "../assets/images/galaxybrochure.png";
-import galaxymobile from "../assets/images/galaxymobile.png";
 import beforegalaxy from "../assets/images/beforegalaxy.png";
-import aftergalaxy from "../assets/images/aftergalaxy.png";
 import sofibefore from "../assets/images/sofibefore.png";
 import sofiafter from "../assets/images/sofiafter.png";
 import makibefore from "../assets/images/makibefore.png";

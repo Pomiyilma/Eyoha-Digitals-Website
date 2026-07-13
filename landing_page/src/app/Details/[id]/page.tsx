@@ -10,7 +10,6 @@ import { Testimonial } from "@/sectionsclientdetailpage/Testimonial";
 import Navbar2 from "@/sections/Navbar2";
 import Footer from "@/sections/Footer";
 import Image from "next/image";
-import { CheckCircle2, ArrowRight, Users, Palette, TrendingUp, Database, CodeXml, Globe, Share2, Smartphone, Type, Megaphone, Target } from "lucide-react";
 
 const CaseStudyTemplate = () => {
     const params = useParams();

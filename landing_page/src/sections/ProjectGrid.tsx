@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Briefcase, Heart, GraduationCap, Home } from "lucide-react"; // Optional: Using lucide-react for icons
 import portfolio21 from "../assets/images/portfolio21.png";
 import portfolio22 from "../assets/images/portfolio22.png";
-import portfolio23 from "../assets/images/portfolio23.png";
 import portfolio24 from "../assets/images/portfolio24.png";
 import portfolio25 from "../assets/images/portfolio25.png";
 import portfolio26 from "../assets/images/portfolio26.png";
