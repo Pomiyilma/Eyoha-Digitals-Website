@@ -58,7 +58,7 @@ const WinCard: React.FC<WinCardProps> = ({
             </p>
 
             {/* Unique Graphic Area */}
-            <div className="w-full h-32 relative mb-10 flex items-center justify-center">
+            <div className="w-full h-32 relative mt-4 mb-8 flex items-center justify-center">
                 <Image
                     src={graphicSrc}
                     alt={`${title} graphic`}

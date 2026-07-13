@@ -25,7 +25,7 @@ const clientData: ClientCardProps[] = [
         id: "galaxyFurniture",
         logo: galaxyfurniture,
         companyName: "Galaxy Furniture",
-        subcompanyName: "Interior and Furniture",
+        subcompanyName: "Furniture",
         testimonial:
             '"Exceptional digital transformation that increased our conversion rate by 340%"',
         category: "E-commerce Platform",
@@ -35,7 +35,7 @@ const clientData: ClientCardProps[] = [
         id: "safeFurniture",
         logo: sofifurniture,
         companyName: "Safe Furniture",
-        subcompanyName: "Interior and Furniture",
+        subcompanyName: "Furniture",
         testimonial:
             '"Outstanding mobile app development that revolutionized our customer experience"',
         category: "Mobile Banking App",

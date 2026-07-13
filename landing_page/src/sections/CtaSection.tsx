@@ -18,7 +18,7 @@ const CtaSection: React.FC = () => {
                     <div className="flex-shrink-0">
                         <button
                             type="button"
-                            className="group flex items-center gap-2 rounded-md bg-[#FF6600] px-8 py-4 text-lg font-semibold text-white shadow-xl transition-all hover:bg-[#ea580c] hover:scale-105 active:scale-95"
+                            className="group flex items-center gap-2 rounded-md bg-[#ffffff] px-8 py-4 text-lg font-semibold text-purple-700 shadow-xl transition-all hover:bg-[#ea580c] hover:scale-105 active:scale-95"
                         >
                             Schedule Your Consultation
                             <svg

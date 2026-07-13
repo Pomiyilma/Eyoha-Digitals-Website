@@ -11,29 +11,29 @@ import boostcircles from "../assets/images/boostcircles.png";
 import eyeIcon from "../assets/images/eyeIcon.png";
 const winsData = [
     {
-        metric: "+300%",
-        title: "Reach in 3 Months",
+        metric: "500,000+",
+        title: "PEOPLE REACHED",
         description:
-            "From zero to viral. We helped XYZ build a fast growing digital presence.",
+            "We helped Maki Interior Design reach over 500,000 people through via paid advertising.",
         graphicSrc: recentwin1,
         iconBgColor: "linear-gradient(135deg, #6A0DAD, #FF8C00)",
         iconSrc: growth,
         bottomIcon: TrendingUp,
     },
     {
-        metric: "5x",
+        metric: "2x",
         title: "Organic Traffic Growth",
-        description: "A full SEO upgrade pushed ABC to the top search results.",
+        description: "We helped Galaxy Furniture achieve 2× audience growth through organic content.",
         graphicSrc: recentwin2,
         iconBgColor: "linear-gradient(135deg, #FF8C00, #6A0DAD)",
         iconSrc: searchIcon,
         bottomIcon: Rocket,
     },
     {
-        metric: "400%",
-        title: "Conversion Boost",
+        metric: "95%",
+        title: "Conversion Rate Growth",
         description:
-            "Smart ad targeting helped DEF turn clicks into paying customers.",
+            "We helped Maki Interior Design achieve a 95% increase in student enrollments through paid Ads.",
         graphicSrc: recentwin3,
         iconBgColor: "linear-gradient(135deg, #FF8C00, #6A0DAD)",
         iconSrc: boostcircles,

@@ -13,21 +13,21 @@ const clientLogos = [
         alt: "Flintstone",
         radius: 245,
         angle: -140,
-        size: 110, // Added custom size
+        size: 110,
     },
     {
         src: sebenImage,
         alt: "Seben",
         radius: 100,
         angle: -100,
-        size: 70, // Smaller size
+        size: 70, 
     },
     {
         src: FinanceImage,
         alt: "Real Estate",
         radius: 245,
         angle: -90,
-        size: 120, // Larger size
+        size: 120,
     },
     {
         src: makiImage,
@@ -99,7 +99,7 @@ export default function ClientSuccessStories() {
                             <span className={purpleAccent}>stories</span>
                         </h2>
                         <p className="text-gray-600 text-lg mb-10 max-w-[550px]">
-                            Join over 500+ companies that trust us to deliver
+                            Join over 10+ companies that trust us to deliver
                             exceptional results.
                         </p>
 
@@ -122,12 +122,12 @@ export default function ClientSuccessStories() {
                         <div className="grid grid-cols-3 gap-4 md:gap-12 border-t border-gray-100 pt-8">
                             <StatBlock
                                 label="Happy Clients"
-                                value="500+"
+                                value="10+"
                                 accentColor={purpleAccent}
                             />
                             <StatBlock
                                 label="Satisfaction"
-                                value="98%"
+                                value="95%"
                                 accentColor={purpleAccent}
                             />
                             <StatBlock

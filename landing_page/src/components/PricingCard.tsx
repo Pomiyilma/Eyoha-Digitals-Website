@@ -100,7 +100,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
     return (
         <div
             className={`
-            relative flex flex-col items-center p-8 rounded-[2.5rem] transition-all duration-300 cursor-default
+            relative flex h-full min-h-[560px] flex-col items-center p-8 rounded-[2.5rem] transition-all duration-300 cursor-default
             bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)] border-4
             ${
                 isFeatured
@@ -145,18 +145,20 @@ export const PricingCard: React.FC<PricingCardProps> = ({
                 ))}
             </ul>
 
-            <button
-                className={`
-                w-full py-4 rounded-2xl font-bold text-lg transition-all duration-300
-                ${
-                    isFeatured
-                        ? "bg-[#FF6B00] text-white shadow-lg shadow-orange-200"
-                        : "bg-[#7C3AED] text-white group-hover:bg-[#FF6B00] group-hover:shadow-orange-200"
-                }
-            `}
-            >
-                {buttonText}
-            </button>
+            <div className="mt-auto w-full">
+                <button
+                    className={`
+                    w-full py-4 rounded-2xl font-bold text-lg transition-all duration-300
+                    ${
+                        isFeatured
+                            ? "bg-[#FF6B00] text-white shadow-lg shadow-orange-200"
+                            : "bg-[#7C3AED] text-white group-hover:bg-[#FF6B00] group-hover:shadow-orange-200"
+                    }
+                `}
+                >
+                    {buttonText}
+                </button>
+            </div>
         </div>
     );
 };
