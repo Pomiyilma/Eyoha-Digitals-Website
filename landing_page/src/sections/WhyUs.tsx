@@ -59,7 +59,7 @@ export default function WhyUs() {
                 <div className="mx-auto max-w-3xl text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
                         Why{" "}
-                        <span className={purpleAccent}>Eyoha Digitals?</span>
+                        <span className={purpleAccent}>Lisan Creatives?</span>
                     </h2>
 
                     <p

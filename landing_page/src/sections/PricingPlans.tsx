@@ -78,7 +78,7 @@ export default function PricingPlans() {
                         Our Pricing
                     </span>
                     <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
-                        EYOHA DIGITALS{" "}
+                        LISAN CREATIVES{" "}
                         <span className={purpleAccent}>PACKAGES</span>
                     </h2>
 

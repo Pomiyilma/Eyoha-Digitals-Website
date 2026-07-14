@@ -54,7 +54,7 @@ export default function PricingSection() {
         <section className="bg-white py-20 px-6 font-sans">
             <div className="max-w-7xl mx-auto text-center">
                 <h2 className="text-black text-4xl font-black mb-2 tracking-tight uppercase">
-                    Eyoha Digitals
+                    Lisan Creatives
                 </h2>
                 <h3 className="text-[#8B5CF6] text-4xl font-black mb-20 uppercase">
                     Packages

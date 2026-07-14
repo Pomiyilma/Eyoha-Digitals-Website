@@ -34,7 +34,7 @@ export const Transformation = ({
                     {/* Before Column */}
                     <div className="flex flex-col">
                         <h3 className="text-xl font-[900] mb-8 text-gray-900 tracking-tight">
-                            Before Eyoha
+                            Before Lisan
                         </h3>
 
                         <div className="relative rounded-[2.5rem] overflow-hidden shadow-sm aspect-[16/11] mb-10 bg-gray-200 border border-gray-100">
@@ -70,7 +70,7 @@ export const Transformation = ({
                     {/* After Column */}
                     <div className="flex flex-col">
                         <h3 className="text-xl font-[900] mb-8 text-gray-900 tracking-tight">
-                            After Eyoha
+                            After Lisan
                         </h3>
 
                         <div

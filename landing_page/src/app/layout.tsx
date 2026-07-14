@@ -11,7 +11,7 @@ const inter = Inter({
 
 // app/layout.tsx
 export const metadata: Metadata = {
-    title: "Eyoha Digitals - Elevate Your Brand with Expert Digital Marketing",
+    title: "Lisan Creatives - Elevate Your Brand with Expert Digital Marketing",
     description: "Expert digital marketing services for your brand.",
     icons: {
         icon: "/eyohalogo.png", // Standard favicon

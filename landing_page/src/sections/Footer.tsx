@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
                                 {" "}
                                 <Image
                                     src={logoImage}
-                                    alt="Eyoha Digitals Logo"
+                                    alt="Lisan Creatives Logo"
                                     width={40}
                                     height={40}
                                     className="object-contain"
@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
                             </div>
 
                             <span className="text-2xl font-bold">
-                                Eyoha Digitals
+                                Lisan Creatives
                             </span>
                         </div>
                         <p className="text-gray-300 text-sm leading-relaxed max-w-sm">
@@ -144,7 +144,7 @@ const Footer: React.FC = () => {
                 </div>
 
                 <div className="border-t border-purple-800 pt-6 pb-8 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-400">
-                    <p>© 2025 Eyoha Digitals. All rights reserved.</p>
+                    <p>© 2026 Lisan Creatives. All rights reserved.</p>
 
                     <div className="flex space-x-4 mt-4 sm:mt-0">
                         <a

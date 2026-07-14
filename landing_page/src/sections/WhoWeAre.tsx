@@ -16,7 +16,7 @@ export default function WhoWeAre() {
                             <span className="text-[#FF6B00]">
                                 creativity and technology
                             </span>
-                            , Eyoha Digitals emerged from a simple belief: every
+                            , Lisan Creatives emerged from a simple belief: every
                             brand has a unique story worth telling.
                         </p>
                         <p>

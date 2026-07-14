@@ -35,7 +35,7 @@ export default function WhoWeAre() {
 
                         <div className="space-y-6 text-gray-600 text-base md:text-lg">
                             <p>
-                                Eyoha Digitals is a results-driven digital
+                                Lisan Creatives is a results-driven digital
                                 marketing and creative agency helping businesses
                                 build strong online identities, reach the right
                                 audience, and convert followers into customers.
@@ -72,7 +72,7 @@ export default function WhoWeAre() {
                         <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-square xl:aspect-[4/3] rounded-[32px] overflow-hidden shadow-2xl">
                             <Image
                                 src={aboutImage}
-                                alt="Eyoha Digitals Team Meeting"
+                                alt="Lisan Creatives Team Meeting"
                                 fill
                                 priority
                                 className="object-cover transform hover:scale-105 transition duration-500 ease-in-out"

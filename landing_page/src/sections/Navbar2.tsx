@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import logoImage from "../assets/images/eyohalogonew.png";
+import logoImage from "../assets/images/lisan-logo.png";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -50,7 +50,7 @@ export default function Navbar2() {
                         <div className="flex items-center justify-center rounded-sm">
                             <Image
                                 src={logoImage}
-                                alt="Eyoha Digitals Logo"
+                                alt="Lisan Creatives Logo"
                                 width={88}
                                 height={88}
                                 className="object-contain "
@@ -60,7 +60,7 @@ export default function Navbar2() {
                             href="/"
                             className="text-white text-lg font-bold font-poppins tracking-wider whitespace-nowrap"
                         >
-                            Eyoha Digitals
+                            Lisan Creatives
                         </Link>
                     </div>
 

@@ -80,7 +80,7 @@ export const PAGE_DATA: Record<string, CaseStudyProps> = {
     amenFurniture: {
         companyName: "Amen Furniture",
         logo: safelogo,
-        description: `Amen Furniture is a modern furniture brand dedicated to showcasing stylish and high-quality products. Eyoha Digitals partnered with Amen Furniture to strengthen its digital presence and showcase products effectively.`,
+        description: `Amen Furniture is a modern furniture brand dedicated to showcasing stylish and high-quality products. Lisan Creatives partnered with Amen Furniture to strengthen its digital presence and showcase products effectively.`,
         challenges: [
             "Limited digital presence, making it difficult to reach modern furniture buyers online.",
             "Inconsistent brand visuals that weakened recognition and perceived professionalism.",
@@ -127,7 +127,7 @@ export const PAGE_DATA: Record<string, CaseStudyProps> = {
             { label: "Product Visibility", value: "Enhanced" },
         ],
         testimonial: {
-            quote: "Eyoha Digitals transformed our online presence — our brand now truly reflects the quality and style of our furniture.",
+            quote: "Lisan Creatives transformed our online presence — our brand now truly reflects the quality and style of our furniture.",
             author: "Amen Furniture",
             role: "CEO",
             avatar: testimonial,
@@ -172,7 +172,7 @@ export const PAGE_DATA: Record<string, CaseStudyProps> = {
     skillbridge: {
         companyName: "Skillbridge Institute of Technology",
         logo: skillbridgeLogo,
-        description: `Skillbridge Institute of Technology is a practical, skill-focused education center preparing students for technology-driven careers. Eyoha Digitals partnered with the institute to build a consistent academic brand and create strategic educational content that engages students and strengthens credibility in the tech education space.`,
+        description: `Skillbridge Institute of Technology is a practical, skill-focused education center preparing students for technology-driven careers. Lisan Creatives partnered with the institute to build a consistent academic brand and create strategic educational content that engages students and strengthens credibility in the tech education space.`,
         challenges: [
             "Limited visibility and brand recognition in a competitive tech education market.",
             "Difficulty communicating the real-world value of courses to prospective students.",
@@ -231,7 +231,7 @@ export const PAGE_DATA: Record<string, CaseStudyProps> = {
             { label: "Consistent Messaging", value: "Yes" },
         ],
         testimonial: {
-            quote: "Eyoha Digitals helped us showcase our programs professionally, attracting motivated students consistently.",
+            quote: "Lisan Creatives helped us showcase our programs professionally, attracting motivated students consistently.",
             author: "Skillbridge Institute of Technology",
             role: "CEO",
             avatar: testimonial,
@@ -284,7 +284,7 @@ export const PAGE_DATA: Record<string, CaseStudyProps> = {
     safeFurniture: {
         companyName: "Safe Furniture",
         logo: safelogo,
-        description: `Safe Furniture is a contemporary furniture brand committed to delivering stylish, durable, and functional pieces for modern living spaces. Eyoha Digitals partnered with Safe Furniture to build the brand from the ground up and manage its ongoing digital growth — establishing a strong identity while driving visibility, engagement, and brand recognition.`,
+        description: `Safe Furniture is a contemporary furniture brand committed to delivering stylish, durable, and functional pieces for modern living spaces. Lisan Creatives partnered with Safe Furniture to build the brand from the ground up and manage its ongoing digital growth — establishing a strong identity while driving visibility, engagement, and brand recognition.`,
         challenges: [
             "No existing brand identity, resulting in unclear market positioning.",
             "Zero digital presence at launch, limiting early customer reach.",
@@ -392,7 +392,7 @@ export const PAGE_DATA: Record<string, CaseStudyProps> = {
     makiInterior: {
         companyName: "Maki Interior Design",
         logo: makilogo,
-        description: `Maki Interior Design is a professional design firm offering customized interior solutions alongside a dedicated interior design school. Eyoha Digitals partnered with the brand to drive qualified traffic through targeted paid advertising — attracting both high-intent clients and prospective students.`,
+        description: `Maki Interior Design is a professional design firm offering customized interior solutions alongside a dedicated interior design school. Lisan Creatives partnered with the brand to drive qualified traffic through targeted paid advertising — attracting both high-intent clients and prospective students.`,
         challenges: [
             "Limited inbound inquiries for interior design services.",
             "Low awareness of the interior design school among potential students.",
@@ -484,7 +484,7 @@ export const PAGE_DATA: Record<string, CaseStudyProps> = {
     aminHospital: {
         companyName: "Amin General Hospital",
         logo: aminlogo,
-        description: `Amin General Hospital is a trusted healthcare provider dedicated to delivering quality medical services through modern facilities and a patient-centered approach. Eyoha Digitals partnered with the hospital to strengthen its communication foundation by developing strategic, educational, and brand-aligned content that enhances credibility and patient awareness.`,
+        description: `Amin General Hospital is a trusted healthcare provider dedicated to delivering quality medical services through modern facilities and a patient-centered approach. Lisan Creatives partnered with the hospital to strengthen its communication foundation by developing strategic, educational, and brand-aligned content that enhances credibility and patient awareness.`,
         challenges: [
             "Lack of structured content to clearly communicate medical services.",
             "Difficulty educating patients in a simple, trustworthy, and professional tone.",
@@ -579,7 +579,7 @@ export const PAGE_DATA: Record<string, CaseStudyProps> = {
     beltechSolutions: {
         companyName: "Beltech Solutions",
         logo: beltechlogo,
-        description: `Beltech Solutions is a professional digital business solutions company specializing in ERP systems, Odoo implementations, website development, and related business technologies. Eyoha Digitals partnered with Beltech Solutions to craft a strong brand identity from scratch and establish a professional presence on LinkedIn and Telegram through strategic content and visual storytelling.`,
+        description: `Beltech Solutions is a professional digital business solutions company specializing in ERP systems, Odoo implementations, website development, and related business technologies. Lisan Creatives partnered with Beltech Solutions to craft a strong brand identity from scratch and establish a professional presence on LinkedIn and Telegram through strategic content and visual storytelling.`,
         challenges: [
             "No established brand identity, limiting recognition in the B2B tech market.",
             "Lack of professional digital channels to communicate expertise and services.",
