@@ -27,8 +27,8 @@ const clientData: ClientCardProps[] = [
         companyName: "Galaxy Furniture",
         subcompanyName: "Furniture",
         testimonial:
-            '"Exceptional digital transformation that increased our conversion rate by 340%"',
-        category: "E-commerce Platform",
+            '"We saw a stronger, more confident brand presence that made our products stand out online."',
+        category: "Furniture Brand",
         accentColor: "orange",
     },
     {
@@ -37,8 +37,8 @@ const clientData: ClientCardProps[] = [
         companyName: "Safe Furniture",
         subcompanyName: "Furniture",
         testimonial:
-            '"Outstanding mobile app development that revolutionized our customer experience"',
-        category: "Mobile Banking App",
+            '"We just love our new logo, colors, and overall branding. It exceeded our expectations, boosted our confidence, and built a strong digital presence for our brand."',
+        category: "Furniture Brand",
         accentColor: "purple",
     },
     {
@@ -47,18 +47,18 @@ const clientData: ClientCardProps[] = [
         companyName: "Maki Interior Design",
         subcompanyName: "Interior and Furniture",
         testimonial:
-            '"Outstanding mobile app development that revolutionized our customer experience"',
-        category: "Mobile Banking App",
+            '"The paid campaigns were a game-changer. We saw measurable growth in both client inquiries and student applications."',
+        category: "Interior Design",
         accentColor: "purple",
     },
     {
         id: "aminHospital",
         logo: amin,
-        companyName: "Amin Hospital",
+        companyName: "Amin General Hospital",
         subcompanyName: "Healthcare Services",
         testimonial:
-            '"Exceptional digital transformation that increased our conversion rate by 340%"',
-        category: "E-commerce Platform",
+            '"Their content strategy helped us connect better with our patients and present our services clearly online."',
+        category: "Healthcare",
         accentColor: "orange",
     },
     {
@@ -67,18 +67,18 @@ const clientData: ClientCardProps[] = [
         companyName: "Skillbridge Institute of Technology",
         subcompanyName: "Education",
         testimonial:
-            '"Exceptional digital transformation that increased our conversion rate by 340%"',
-        category: "E-commerce Platform",
+            '"Lisan really helped us showcase our programs professionally, attracting motivated students consistently."',
+        category: "Education",
         accentColor: "orange",
     },
     {
         id: "beltechSolutions",
         logo: beltech,
-        companyName: "Beitech Solutions",
-        subcompanyName: "Education",
+        companyName: "Beltech Solutions",
+        subcompanyName: "Technology",
         testimonial:
-            '"Exceptional digital transformation that increased our conversion rate by 340%"',
-        category: "E-commerce Platform",
+            '"We now have a clear, credible digital identity that effectively communicates our solutions to business clients."',
+        category: "Technology",
         accentColor: "orange",
     },
 ];
