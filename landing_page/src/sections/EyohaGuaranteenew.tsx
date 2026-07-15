@@ -102,7 +102,7 @@ export default function EyohaGuaranteenew() {
                 <div className="text-center mb-20">
                     <div className="w-20 h-[3px] bg-gradient-to-r from-[#8B5CF6] to-[#F97316] mx-auto mb-6" />
                     <h2 className="text-[#0F172A] text-4xl md:text-5xl font-extrabold tracking-tight">
-                        The Lisan Guarantee
+                        The Lisan Creatives Guarantee
                     </h2>
                     <div className="w-24 h-[3px] bg-gradient-to-r from-[#8B5CF6] to-[#F97316] mx-auto mt-6" />
                 </div>

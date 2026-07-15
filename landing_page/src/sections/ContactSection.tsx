@@ -90,7 +90,7 @@ export default function ContactSection() {
                                     <Mail size={20} />
                                 </div>
                                 <span className="text-gray-700 font-medium">
-                                    eyohadigitals@gmail.com
+                                    lisancreatives@gmail.com
                                 </span>
                             </div>
                             <div className="flex items-center space-x-4 group">
@@ -124,7 +124,7 @@ export default function ContactSection() {
 
                         {/* Book a Consultation */}
                         <Link
-                            href="https://calendly.com/eyohadigitals/30min"
+                            href="https://calendly.com/lisancreatives/30min"
                             target="_blank"
                             rel="noopener noreferrer"
                         >

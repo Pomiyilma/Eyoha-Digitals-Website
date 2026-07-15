@@ -14,9 +14,9 @@ export const metadata: Metadata = {
     title: "Lisan Creatives - Elevate Your Brand with Expert Digital Marketing",
     description: "Expert digital marketing services for your brand.",
     icons: {
-        icon: "/eyohalogo.png", // Standard favicon
-        shortcut: "/eyohalogo.png", // Alternative for older browsers
-        apple: "/eyohalogo.png", // For iOS home screen bookmarks
+        icon: "/lisan-logo.png", // Standard favicon
+        shortcut: "/lisan-logo.png", // Alternative for older browsers
+        apple: "/lisan-logo.png", // For iOS home screen bookmarks
     },
 };
 

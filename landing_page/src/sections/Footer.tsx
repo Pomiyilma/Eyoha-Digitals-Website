@@ -2,7 +2,7 @@ import React from "react";
 import { Linkedin, Twitter, Instagram, Facebook } from "lucide-react";
 import Image from "next/image";
 
-import logoImage from "../assets/images/eyohalogo.png";
+import logoImage from "../assets/images/lisan-logo.png";
 
 const quickLinks = [
     { name: "Home", href: "#" },
